@@ -1,7 +1,9 @@
 import pymysql.cursors
 import random
 from connection import Connection
+
 connection = Connection().connect
+
 
 def add_attribute(name, object_id):
     with connection.cursor() as cursor:
@@ -15,4 +17,6 @@ def add_attribute(name, object_id):
         result = cursor.fetchone()
         print(result)
     connection.close()
+
+
 add_attribute("first_attibute", "something", "attribute", "Component", "1")

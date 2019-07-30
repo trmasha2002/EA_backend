@@ -1,12 +1,14 @@
-import pymysql.cursors
-import random
 import uuid
 import datetime
 from connection import Connection
+
 connection = Connection().connect
-def add_object(name, stereotype, object_type, package_id, parent_id):
+
+
+def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid=""):
     with connection.cursor() as cursor:
-        ea_quid = '{' + str(uuid.uuid4()) + '}'
+        if (ea_quid == ''):
+            ea_quid = '{' + str(uuid.uuid4()) + '}'
         created_date = str(datetime.datetime.today())
         sql = "INSERT INTO `t_object` (`Object_Type`, `Name`, `ea_guid`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`) VALUES (%s, %s, %s, %s, %s, %s, %s)"
         cursor.execute(sql, (object_type, name, ea_quid, stereotype, package_id, parent_id, created_date))
@@ -18,5 +20,5 @@ def add_object(name, stereotype, object_type, package_id, parent_id):
         print(result)
     connection.close()
 
-add_object("example", "example", "example", "1", "1")
 
+#add_object("example", "example", "example", "1", "1")

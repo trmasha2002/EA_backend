@@ -2,7 +2,10 @@ import pymysql.cursors
 import random
 import uuid
 from connection import Connection
+
 connection = Connection().connect
+
+
 def add_connector(name, connector_type, start_objectid, end_objectid):
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}'
@@ -15,5 +18,6 @@ def add_connector(name, connector_type, start_objectid, end_objectid):
         result = cursor.fetchone()
         print(result)
     connection.close()
+
 
 add_connector("example", "app-link", "12", "13")

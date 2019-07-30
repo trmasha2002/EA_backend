@@ -1,10 +1,10 @@
 import datetime
-
-import pymysql.cursors
-import random
 import uuid
 from connection import Connection
+
 connection = Connection().connect
+
+
 def add_diagram(name, package_id, stereotype, diagram_type):
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}'
@@ -18,4 +18,6 @@ def add_diagram(name, package_id, stereotype, diagram_type):
         result = cursor.fetchone()
         print(result)
     connection.close()
+
+
 add_diagram("twelve", '6', 'package', 'pac')
