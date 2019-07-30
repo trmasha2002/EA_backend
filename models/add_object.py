@@ -2,15 +2,14 @@ import pymysql.cursors
 import random
 import uuid
 # Connect to the database
+
+
 connection = pymysql.connect(host='localhost',
-                            user='root',
+                             user='root',
                              password='root',
                              db='easample',
                              charset='utf8',
                              cursorclass=pymysql.cursors.DictCursor)
-
-
-
 
 def add_object(name, stereotype, object_type, package_id, parent_id):
     with connection.cursor() as cursor:
