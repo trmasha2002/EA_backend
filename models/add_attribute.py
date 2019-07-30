@@ -1,12 +1,7 @@
 import pymysql.cursors
 import random
-# Connect to the database
-connection = pymysql.connect(host='localhost',
-                            user='root',
-                             password='root',
-                             db='easample',
-                             charset='utf8',
-                             cursorclass=pymysql.cursors.DictCursor)
+from connection import Connection
+connection = Connection().connect
 
 def add_attribute(name, object_id):
     with connection.cursor() as cursor:

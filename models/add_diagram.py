@@ -3,13 +3,8 @@ import datetime
 import pymysql.cursors
 import random
 import uuid
-# Connect to the database
-connection = pymysql.connect(host='localhost',
-                            user='root',
-                             password='root',
-                             db='easample',
-                             charset='utf8',
-                             cursorclass=pymysql.cursors.DictCursor)
+from connection import Connection
+connection = Connection().connect
 def add_diagram(name, package_id, stereotype, diagram_type):
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}'

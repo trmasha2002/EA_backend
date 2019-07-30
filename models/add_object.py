@@ -2,16 +2,8 @@ import pymysql.cursors
 import random
 import uuid
 import datetime
-# Connect to the database
-
-
-connection = pymysql.connect(host='localhost',
-                             user='root',
-                             password='root',
-                             db='easample',
-                             charset='utf8',
-                             cursorclass=pymysql.cursors.DictCursor)
-
+from connection import Connection
+connection = Connection().connect
 def add_object(name, stereotype, object_type, package_id, parent_id):
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}'
