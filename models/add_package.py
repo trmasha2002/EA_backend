@@ -18,9 +18,6 @@ def add_package(name, notes, stereotype, object_type, parent_id):
         cursor.execute(sql)
         result = cursor.fetchone()
         package_id = str(result['MAX(`Package_ID`)'])
-        #ea_quid = '{' + str(uuid.uuid4()) + '}'
-        #sql = "INSERT INTO `t_object` (`Object_Type`, `Name`, `ea_guid`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-        #cursor.execute(sql, (object_type, name, ea_quid, stereotype, package_id, parent_id, created_date))
         add_object(name, stereotype, object_type, package_id, parent_id, ea_quid)
     connection.commit()
     print("hello")
