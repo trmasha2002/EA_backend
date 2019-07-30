@@ -1,5 +1,6 @@
 import pymysql.cursors
 import random
+import uuid
 # Connect to the database
 connection = pymysql.connect(host='localhost',
                             user='root',
@@ -11,15 +12,15 @@ connection = pymysql.connect(host='localhost',
 
 
 
-def add_object(name, stereotype, object_type, package_id, parent_id='0'):
+def add_object(name, stereotype, object_type, package_id, parent_id):
     with connection.cursor() as cursor:
-        ea_quid = str(random.randint(1, 100000))
-        sql = "INSERT INTO `t_object` (`Object_Type`, `Name`, `ea_guid`, `Stereotype`, `Package_ID`, `Parent_ID`) VALUES (%s, %s, %s, %s, %s)"
+        ea_quid = '{' + str(uuid.uuid4()) + '}'
+        sql = "INSERT INTO `t_object` (`Object_Type`, `Name`, `ea_guid`, `Stereotype`, `Package_ID`, `PDATA1`) VALUES (%s, %s, %s, %s, %s, %s)"
         cursor.execute(sql, (object_type, name, ea_quid, stereotype, package_id, parent_id))
     connection.commit()
     with connection.cursor() as cursor:
-        sql = "SELECT `Object_ID`, `Name` FROM `t_object` WHERE `Name`=%s"
-        cursor.execute(sql, (name))
+        sql = "SELECT `Object_ID`, `Name`, `PDATA1` FROM `t_object` WHERE `ea_guid`=%s"
+        cursor.execute(sql, (ea_quid))
         result = cursor.fetchone()
         print(result)
     connection.close()
