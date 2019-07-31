@@ -22,3 +22,22 @@ def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid="")
 
 
 #add_object("example", "example", "example", "1", "1")
+
+
+def update_object(name, stereotype, object_id):
+    with connection.cursor() as cursor:
+        modified_date = str(datetime.datetime.today())
+        sql = "UPDATE `t_object` SET `Name`=%s, `Stereotype`=%s, `ModifiedDate`=%s WHERE `Object_ID`=%s"
+        cursor.execute(sql, (name, stereotype, modified_date, object_id))
+    connection.commit()
+    with connection.cursor() as cursor:
+        sql = "SELECT `Stereotype`, `Name`, `PDATA1` FROM `t_object` WHERE `Object_ID`=%s"
+        cursor.execute(sql, (object_id))
+        result = cursor.fetchone()
+        print(result)
+    connection.close()
+
+
+update_object("newpackage", "executable", "1")
+
+

@@ -1,13 +1,13 @@
 import pymysql.cursors
 import random
 from connection import Connection
-
+import uuid
 connection = Connection().connect
 
 
 def add_attribute(name, object_id):
     with connection.cursor() as cursor:
-        ea_quid = str(random.randint(1, 100000))
+        ea_quid = '{' + str(uuid.uuid4()) + '}'
         sql = "INSERT INTO `t_attribute` (`Object_ID`, `ea_guid`, `Name`) VALUES (%s, %s, %s)"
         cursor.execute(sql, (object_id, ea_quid, name))
     connection.commit()
