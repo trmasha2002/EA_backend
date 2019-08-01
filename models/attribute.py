@@ -1,5 +1,4 @@
 import pymysql.cursors
-import random
 import uuid
 
 
@@ -17,11 +16,10 @@ def add_attribute(name, object_id):
         cursor.execute(sql, (object_id, ea_quid, name))
     connection.commit()
     with connection.cursor() as cursor:
-        sql = "SELECT `Object_ID` FROM `t_attribute` WHERE `Name`=%s"
-        cursor.execute(sql, (name))
+        sql = "SELECT  `ID`, `Object_ID`, `Name` FROM `t_attribute` WHERE `ea_guid`=%s"
+        cursor.execute(sql, (ea_quid))
         result = cursor.fetchone()
         print(result)
     connection.close()
+    return result
 
-
-add_attribute("first_attibute", "something", "attribute", "Component", "1")

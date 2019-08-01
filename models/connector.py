@@ -19,11 +19,10 @@ def add_connector(name, connector_type, start_objectid, end_objectid):
         cursor.execute(sql, (name, ea_quid, connector_type, start_objectid, end_objectid))
     connection.commit()
     with connection.cursor() as cursor:
-        sql = "SELECT `Name`, `Connector_Type`, `Start_Object_ID` FROM `t_connector` WHERE `Name`=%s"
-        cursor.execute(sql, (name))
+        sql = "SELECT `Connector_ID`, `Name`, `Connector_Type`, `Start_Object_ID`, `End_Object_ID` FROM `t_connector` WHERE `ea_guid`=%s"
+        cursor.execute(sql, (ea_quid))
         result = cursor.fetchone()
         print(result)
     connection.close()
+    return result
 
-
-add_connector("example", "app-link", "12", "13")

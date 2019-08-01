@@ -14,11 +14,14 @@ def add_diagramobjects(diagram_id, object_id):
         cursor.execute(sql, (object_id, diagram_id))
     connection.commit()
     with connection.cursor() as cursor:
-        sql = "SELECT `Object_ID`, `Diagram_ID` FROM `t_diagramobjects` WHERE `Object_ID`=%s"
-        cursor.execute(sql, (object_id))
+        sql = "SELECT MAX(`Instance_ID`) FROM `t_diagramobjects`"
+        cursor.execute(sql)
+        result = cursor.fetchone()
+        instance_id = str(result['MAX(`Instance_ID`)'])
+        sql = "SELECT `Instance_ID`, `Object_ID`, `Diagram_ID` FROM `t_diagramobjects` WHERE `Instance_ID`=%s"
+        cursor.execute(sql, (instance_id))
         result = cursor.fetchone()
         print(result)
     connection.close()
+    return result
 
-
-add_diagramobjects('100', '101')

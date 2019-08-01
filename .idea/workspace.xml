@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1812ad12-fa07-457e-ae01-2bca9269cbae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addatribute_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addconnector_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adddiagram_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adddiagramobject_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addobject_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addpackage_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/attribute.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/attribute.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/connector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/diagram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/diagramobjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/diagramobjects.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/object.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/object.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/package.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/package.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,71 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/connector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/diagram.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/connection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/object.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="29" selection-start-line="29" selection-end-line="34" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/diagramobjects.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/package.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/attribute.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+            <state relative-caret-position="362">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -93,10 +40,103 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+        <entry file="file://$PROJECT_DIR$/models/diagram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="32" />
+            <state relative-caret-position="254">
+              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/object.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/connection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/diagramobjects.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/package.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addconnector_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/attribute.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addobject_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adddiagramobject_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,9 +165,25 @@
         <option value="$PROJECT_DIR$/models/add_package.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/models/connection.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/addpackagetest.py" />
+        <option value="$PROJECT_DIR$/tests/addobjecttest.py" />
+        <option value="$PROJECT_DIR$/tests/addpackagetest.py" />
+        <option value="$PROJECT_DIR$/models/addobject_test.py" />
+        <option value="$PROJECT_DIR$/addobject_test.py" />
+        <option value="$PROJECT_DIR$/addatribute_test.py" />
+        <option value="$PROJECT_DIR$/add_connector.py" />
+        <option value="$PROJECT_DIR$/addpackage_test.py" />
+        <option value="$PROJECT_DIR$/adddiagram_test.py" />
+        <option value="$PROJECT_DIR$/adddiagramsobject_test.py" />
+        <option value="$PROJECT_DIR$/main_test.py" />
+        <option value="$PROJECT_DIR$/addconnector_test.py" />
+        <option value="$PROJECT_DIR$/models/attribute.py" />
+        <option value="$PROJECT_DIR$/models/connector.py" />
+        <option value="$PROJECT_DIR$/models/diagram.py" />
+        <option value="$PROJECT_DIR$/models/diagramobjects.py" />
         <option value="$PROJECT_DIR$/models/object.py" />
         <option value="$PROJECT_DIR$/models/package.py" />
-        <option value="$PROJECT_DIR$/models/attribute.py" />
       </list>
     </option>
   </component>
@@ -167,8 +223,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/models" />
+      <recent name="$PROJECT_DIR$/tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -183,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Unittests in addpackage_test.py">
     <configuration name="add_connector" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymsql" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,8 +262,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in addpackage_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="pymsql" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/addpackage_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in addpackage_test.py" />
         <item itemvalue="Python.add_connector" />
       </list>
     </recent_temporary>
@@ -224,8 +296,19 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_addpackagetest_py - 2019.08.01 at 16h 03m 16s.xml">
+      <configuration name="Unittests in addpackagetest.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_addpackagetest_py - 2019.08.01 at 16h 05m 30s.xml">
+      <configuration name="Unittests in addpackagetest.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_addpackagetest_py - 2019.08.01 at 16h 19m 22s.xml">
+      <configuration name="Unittests in addpackagetest.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="833" extended-state="6" />
+    <frame x="1" y="24" width="1440" height="831" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
@@ -235,60 +318,22 @@
       <window_info id="Job Explorer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32882273" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.33063427" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3301759" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32882273" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32882273" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/diagram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/connector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/diagramobjects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pymysql/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1755">
@@ -299,20 +344,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/object.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="29" selection-start-line="29" selection-end-line="34" selection-end-column="72" />
+        <state relative-caret-position="45">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addatribute_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="6" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/package.py">
+    <entry file="file://$PROJECT_DIR$/adddiagram_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addpackage_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addconnector_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -321,10 +406,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/attribute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        <state relative-caret-position="270">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/connector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/diagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addobject_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adddiagramobject_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/diagramobjects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/package.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -17,11 +17,11 @@ def add_diagram(name, package_id, stereotype, diagram_type):
         cursor.execute(sql, (package_id, name, ea_quid, stereotype, diagram_type, created_date))
     connection.commit()
     with connection.cursor() as cursor:
-        sql = "SELECT `Package_ID`, `Stereotype`, `Diagram_Type` FROM `t_diagram` WHERE `Name`=%s"
-        cursor.execute(sql, (name))
+        sql = "SELECT `Diagram_ID`, `Name`, `Package_ID`, `Stereotype`, `Diagram_Type` FROM `t_diagram` WHERE `ea_guid`=%s"
+        cursor.execute(sql, (ea_quid))
         result = cursor.fetchone()
         print(result)
     connection.close()
+    return result
 
 
-add_diagram("twelve", '6', 'package', 'pac')
