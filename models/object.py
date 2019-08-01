@@ -41,10 +41,11 @@ def update_object(name, stereotype, object_id):
         cursor.execute(sql, (name, stereotype, modified_date, object_id))
     connection.commit()
     with connection.cursor() as cursor:
-        sql = "SELECT `Stereotype`, `Name`, `PDATA1` FROM `t_object` WHERE `Object_ID`=%s"
+        sql = "SELECT `Object_ID`, `Stereotype`, `Name`, `PDATA1` FROM `t_object` WHERE `Object_ID`=%s"
         cursor.execute(sql, (object_id)) #проверка что данные изменились
         result = cursor.fetchone()
         print(result)
+    return result
     connection.close()
 
 

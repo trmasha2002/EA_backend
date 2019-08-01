@@ -48,7 +48,7 @@ def update_package(name, notes, stereotype, package_id):
         cursor.execute(sql, (name, stereotype, modified_data, notes, package_id)) # обновление объекта
     connection.commit()
     with connection.cursor() as cursor:
-        sql = "SELECT `Name`, `Notes` FROM `t_package` WHERE `Package_ID`=%s"
+        sql = "SELECT `Package_ID`, `Name`, `Notes` FROM `t_package` WHERE `Package_ID`=%s"
         cursor.execute(sql, (package_id)) # проверка что данные объекта изменились
         result = cursor.fetchone()
         print(result)
