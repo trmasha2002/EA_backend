@@ -1,10 +1,11 @@
 # EA_backend
 Install:
   In terminal
-  1. virtualenv --python=python3 venv
-  2. source venv/bin/activate
-  3. pip3 install -r requirements.txt
-  4. make db 'easample'
+  1. pip3 install virtualenv
+  2. virtualenv --python=python3 venv
+  3. source venv/bin/activate
+  4. pip3 install -r requirements.txt
+  5. make db 'easample'
   
 Run:
   In terminal
