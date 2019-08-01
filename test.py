@@ -1,1 +1,2 @@
-print(32 * 152985  / 12)
+from models import package
+package.add_package("Test", None, None, "Package", "1")

@@ -1,11 +1,14 @@
 import uuid
 import datetime
-from connection import Connection
-
-connection = Connection().connect
-
-
+import pymysql
 def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid=""):
+    connection = pymysql.connect(host='localhost',
+                                 user='root',
+                                 password='root',
+                                 db='easample',
+                                 charset='utf8',
+                                 cursorclass=pymysql.cursors.DictCursor)
+
     with connection.cursor() as cursor:
         if (ea_quid == ''):
             ea_quid = '{' + str(uuid.uuid4()) + '}'
@@ -25,6 +28,13 @@ def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid="")
 
 
 def update_object(name, stereotype, object_id):
+    connection = pymysql.connect(host='localhost',
+                                 user='root',
+                                 password='root',
+                                 db='easample',
+                                 charset='utf8',
+                                 cursorclass=pymysql.cursors.DictCursor)
+
     with connection.cursor() as cursor:
         modified_date = str(datetime.datetime.today())
         sql = "UPDATE `t_object` SET `Name`=%s, `Stereotype`=%s, `ModifiedDate`=%s WHERE `Object_ID`=%s"

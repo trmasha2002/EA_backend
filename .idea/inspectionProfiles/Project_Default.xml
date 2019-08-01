@@ -5,6 +5,8 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="MySQLdb" />
+          <option value="add_object" />
+          <option value="models.add_diagram.connection" />
         </list>
       </option>
     </inspection_tool>

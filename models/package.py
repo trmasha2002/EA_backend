@@ -3,13 +3,16 @@ import datetime
 import pymysql.cursors
 import random
 import uuid
-from connection import Connection
-from object import add_object
-from object import update_object
-connection = Connection().connect
-
+from models import object
 
 def add_package(name, notes, stereotype, object_type, parent_id):
+    connection = pymysql.connect(host='localhost',
+                                 user='root',
+                                 password='root',
+                                 db='easample',
+                                 charset='utf8',
+                                 cursorclass=pymysql.cursors.DictCursor)
+
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}'
         created_date = str(datetime.datetime.today())
@@ -19,7 +22,7 @@ def add_package(name, notes, stereotype, object_type, parent_id):
         cursor.execute(sql)
         result = cursor.fetchone()
         package_id = str(result['MAX(`Package_ID`)'])
-        add_object(name, stereotype, object_type, package_id, parent_id, ea_quid)
+        object.add_object(name, stereotype, object_type, package_id, parent_id, ea_quid)
     connection.commit()
     with connection.cursor() as cursor:
         sql = "SELECT `ea_guid`, `Name` FROM `t_object` WHERE `ea_guid`=%s"
@@ -33,6 +36,13 @@ def add_package(name, notes, stereotype, object_type, parent_id):
 
 
 def update_package(name, notes, stereotype, package_id):
+    connection = pymysql.connect(host='localhost',
+                                 user='root',
+                                 password='root',
+                                 db='easample',
+                                 charset='utf8',
+                                 cursorclass=pymysql.cursors.DictCursor)
+
     with connection.cursor() as cursor:
         modified_data = str(datetime.datetime.today())
         sql = "UPDATE `t_package` SET `Name`=%s, `Notes`=%s WHERE `Package_ID`=%s"
@@ -47,4 +57,4 @@ def update_package(name, notes, stereotype, package_id):
         print(result)
     connection.close()
 
-update_package("NewPackage", None, "executable", "2")
+#update_package("NewPackage", None, "executable", "2")

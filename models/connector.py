@@ -1,12 +1,18 @@
 import pymysql.cursors
 import random
 import uuid
-from connection import Connection
 
-connection = Connection().connect
+
 
 
 def add_connector(name, connector_type, start_objectid, end_objectid):
+    connection = pymysql.connect(host='localhost',
+                                 user='root',
+                                 password='root',
+                                 db='easample',
+                                 charset='utf8',
+                                 cursorclass=pymysql.cursors.DictCursor)
+
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}'
         sql = "INSERT INTO `t_connector` (`Name`, `ea_guid`, `Connector_Type`, `Start_Object_ID`, `End_Object_ID`) VALUES (%s, %s, %s, %s, %s)"
