@@ -1,4 +1,2 @@
 pymysql
 uuid
-datetime
-unittest
