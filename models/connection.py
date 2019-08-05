@@ -1,6 +1,6 @@
 import pymysql.cursors
 
-connect = pymysql.connect(host='localhost',
+connect = pymysql.connect(host='localhost',  #подключение к базе данных
                                        user='root',
                                        password='root',
                                        db='easample',

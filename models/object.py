@@ -3,7 +3,7 @@ import datetime
 import pymysql
 def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid=""):
     connection = pymysql.connect(host='localhost',
-                                 user='root',
+                                 user='root', #подключение к базе данных
                                  password='root',
                                  db='easample',
                                  charset='utf8',
@@ -11,7 +11,7 @@ def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid="")
 
     with connection.cursor() as cursor:
         if (ea_quid == ''):
-            ea_quid = '{' + str(uuid.uuid4()) + '}'
+            ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа
         created_date = str(datetime.datetime.today())
         sql = "INSERT INTO `t_object` (`Object_Type`, `Name`, `ea_guid`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`) VALUES (%s, %s, %s, %s, %s, %s, %s)"
         cursor.execute(sql, (object_type, name, ea_quid, stereotype, parent_id, package_id, created_date)) #добавление объекта
