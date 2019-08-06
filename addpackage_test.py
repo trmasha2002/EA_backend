@@ -1,7 +1,7 @@
 import unittest
 
 from models import package
-
+import pyodbc
 class TestAddPackage(unittest.TestCase):
   def test_upper(self):
       self.assertTrue(package.add_package("Test", None, None, "Package", "1"))

@@ -1,8 +1,9 @@
 import pymysql.cursors
+import pyodbc
 
-connect = pymysql.connect(host='localhost',  #подключение к базе данных
-                                       user='root',
-                                       password='root',
-                                       db='easample',
-                                       charset='utf8',
-                                       cursorclass=pymysql.cursors.DictCursor)
+connection = pyodbc.connect("Driver={Devart ODBC Driver for MySQL};"
+                            "Server=localhost;"
+                            "Database=easample;"
+                            "USER=root;"
+                            "PASSWORD=root;"
+                            "OPTION=3;")
