@@ -1,7 +1,6 @@
 import pymysql
 import pyodbc
-from models import connection
-connection = connection.connection
+from models.connection import connection
 def add_diagramobjects(diagram_id, object_id):
     with connection.cursor() as cursor:
         sql = "INSERT INTO `t_diagramobjects` (`Object_ID`, `Diagram_ID`) VALUES (?, ?)"#добавление объекта

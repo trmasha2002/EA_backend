@@ -2,8 +2,7 @@ import datetime
 import uuid
 import pymysql
 import pyodbc
-from models import connection
-connection = connection.connection
+from models.connection import connection
 def add_diagram(name, package_id, stereotype, diagram_type):
 
     with connection.cursor() as cursor:

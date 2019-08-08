@@ -4,8 +4,7 @@ import pymysql.cursors
 import pyodbc
 import uuid
 from models import object
-from models import connection
-connection = connection.connection
+from models.connection import connection
 def add_package(name, notes, stereotype, object_type, parent_id):
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа
@@ -21,8 +20,8 @@ def add_package(name, notes, stereotype, object_type, parent_id):
         sql = "SELECT `Package_ID`, `Name`, `Notes`, `CreatedDate`  FROM `t_package` WHERE `ea_guid`=?" #поиск добавленого пакета по ключу
         result = cursor.execute(sql, ea_quid).fetchall()
         print(result)
-    connection.close()
     return result
+    connection.close()
 
 
 def update_package(name, notes, stereotype, package_id):
@@ -37,5 +36,5 @@ def update_package(name, notes, stereotype, package_id):
         sql = "SELECT `Package_ID`, `Name`, `Notes` FROM `t_package` WHERE `Package_ID`=?"
         result =cursor.execute(sql, (package_id)).fetchall()# проверка что данные объекта изменились
         print(result)
-    connection.close()
     return result
+    connection.close()

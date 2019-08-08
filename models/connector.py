@@ -2,8 +2,7 @@ import pymysql.cursors
 import random
 import uuid
 import pyodbc
-from models import connection
-connection = connection.connection
+from models.connection import connection
 def add_connector(name, connector_type, start_objectid, end_objectid):
 
     with connection.cursor() as cursor:
