@@ -1,6 +1,6 @@
 import datetime
 import uuid
-from config.connection import connection
+from connection import connection
 def add_diagram(name, package_id, stereotype, diagram_type):
 
     with connection.cursor() as cursor:

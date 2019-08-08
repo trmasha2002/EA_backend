@@ -1,5 +1,5 @@
 import uuid
-from config.connection import connection
+from connection import connection
 def add_connector(name, connector_type, start_objectid, end_objectid):
 
     with connection.cursor() as cursor:

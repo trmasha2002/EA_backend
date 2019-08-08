@@ -1,6 +1,6 @@
 import uuid
 import datetime
-from config.connection import connection
+from connection import connection
 def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid=""):
     with connection.cursor() as cursor:
         if (ea_quid == ''):

@@ -1,5 +1,5 @@
 import uuid
-from config.connection import connection
+from connection import connection
 def add_attribute(name, object_id):
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}'#генерация уникального ключа

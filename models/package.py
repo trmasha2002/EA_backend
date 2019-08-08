@@ -2,7 +2,7 @@ import datetime
 
 import uuid
 from models import object
-from config.connection import connection
+from connection import connection
 def add_package(name, notes, stereotype, object_type, parent_id):
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа
