@@ -1,8 +1,0 @@
-{
-    "Driver": "{Devart ODBC Driver for MySQL}",
-    "Server": "localhost",
-    "Database": "easample",
-    "User": "root",
-    "Password": "root",
-    "Option": "3"
-}
