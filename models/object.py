@@ -1,17 +1,21 @@
 import uuid
 import datetime
+import logging
 from connection import connection
 def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid=""):
+    logger = logging.getLogger("AddObject")
     with connection.cursor() as cursor:
+        logger.info("Insert Object...")#добавление объекта
         if (ea_quid == ''):
             ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа
         created_date = str(datetime.datetime.today())
         sql = "INSERT INTO `t_object` (`Object_Type`, `Name`, `ea_guid`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`) VALUES (?, ?, ?, ?, ?, ?, ?)"
-        cursor.execute(sql, (object_type, name, ea_quid, stereotype, parent_id, package_id, created_date)) #добавление объекта
+        cursor.execute(sql, (object_type, name, ea_quid, stereotype, parent_id, package_id, created_date))
     connection.commit()
     with connection.cursor() as cursor:
         sql = "SELECT `Object_ID`, `Name`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`  FROM `t_object` WHERE `ea_guid`=?" #поиск объекта по ключу
         result = cursor.execute(sql, (ea_quid)).fetchall()
+        logger.info(result)
         print(result)
     return result
     connection.close()

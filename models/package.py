@@ -1,12 +1,14 @@
 import datetime
-
+import logging
 import uuid
 from models import object
 from connection import connection
 def add_package(name, notes, stereotype, object_type, parent_id):
+    logger = logging.getLogger("AddPackage")
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа
         created_date = str(datetime.datetime.today())
+        logger.info("Insert package...")
         sql = "INSERT INTO `t_package` (`Name`, `Notes`, `ea_guid`, `CreatedDate`) VALUES (?, ?, ?, ?)" #добавление пакета
         cursor.execute(sql, (name, notes, ea_quid, created_date))
         sql = "SELECT `Package_ID` FROM `t_package` WHERE `ea_guid`=?"
@@ -18,6 +20,7 @@ def add_package(name, notes, stereotype, object_type, parent_id):
         sql = "SELECT `Package_ID`, `Name`, `Notes`, `CreatedDate`  FROM `t_package` WHERE `ea_guid`=?" #поиск добавленого пакета по ключу
         result = cursor.execute(sql, ea_quid).fetchall()
         print(result)
+        logger.info(result)
     return result
     connection.close()
 

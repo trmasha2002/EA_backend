@@ -1,4 +1,5 @@
-2019-08-12 11:09:48,388 - AddObject - INFO - Program started
-2019-08-12 11:09:48,569 - AddObject - INFO - Done!
-2019-08-12 11:09:55,626 - AddObject - INFO - Program started
-2019-08-12 11:09:55,631 - AddObject - INFO - Done!
+2019-08-12 14:13:00,250 - AddPackage - INFO - Insert package...
+2019-08-12 14:13:00,252 - AddObject - INFO - Insert Object...
+2019-08-12 14:13:00,266 - AddObject - INFO - [(136, 'Test', None, 1, '(107, )', datetime.datetime(2019, 8, 12, 14, 13))]
+2019-08-12 14:13:00,269 - AddPackage - INFO - [(107, 'Test', None, datetime.datetime(2019, 8, 12, 14, 13))]
+2019-08-12 14:13:00,270 - AddPackage - INFO - Done!
