@@ -23,3 +23,76 @@
 2019-08-15 11:08:18,643 - AddDiagramObjects - INFO - Insert DiagramObject...
 2019-08-15 11:08:18,655 - AddDiagramObjects - INFO - [(19, 101, 100)]
 2019-08-15 11:08:18,656 - AddDiagramObjects - INFO - Done!
+2019-08-15 11:11:26,596 - AddObject - INFO - Program started
+2019-08-15 11:11:26,596 - AddObject - INFO - Insert Object...
+2019-08-15 11:11:26,628 - AddObject - INFO - [(137, '1', 'example', 1, '1', datetime.datetime(2019, 8, 15, 11, 11, 27))]
+2019-08-15 11:11:26,629 - AddObject - INFO - Done!
+2019-08-15 11:12:13,235 - AddObject - INFO - Program started
+2019-08-15 11:12:13,236 - AddObject - INFO - Insert Object...
+2019-08-15 11:12:13,248 - AddObject - INFO - [(138, '1', 'example', 1, '1', datetime.datetime(2019, 8, 15, 11, 12, 13))]
+2019-08-15 11:12:13,248 - AddObject - INFO - Done!
+2019-08-15 11:12:49,409 - AddObject - INFO - Program started
+2019-08-15 11:12:49,410 - AddObject - INFO - Insert Object...
+2019-08-15 11:12:49,420 - AddObject - INFO - [(139, '1', 'example', 1, '1', datetime.datetime(2019, 8, 15, 11, 12, 49))]
+2019-08-15 11:12:49,422 - AddObject - INFO - Done!
+2019-08-15 11:12:57,474 - AddObject - INFO - Program started
+2019-08-15 11:12:57,474 - AddObject - INFO - Insert Object...
+2019-08-15 11:12:57,490 - AddObject - INFO - [(140, '1', '1', 1, '1', datetime.datetime(2019, 8, 15, 11, 12, 57))]
+2019-08-15 11:12:57,491 - AddObject - INFO - Done!
+2019-08-15 11:13:58,149 - AddObject - INFO - Program started
+2019-08-15 12:33:02,818 - AddPackage - INFO - Insert package...
+2019-08-15 12:33:02,820 - AddPackage - ERROR - Error!
+Traceback (most recent call last):
+  File "/Users/mariatrapicyna/Desktop/EA_backend/models/package.py", line 15, in add_package
+    raise RuntimeError
+RuntimeError
+2019-08-15 12:33:02,821 - AddObject - INFO - Insert Object...
+2019-08-15 12:33:02,831 - AddObject - INFO - [(141, 'Test', None, 1, '(108, )', datetime.datetime(2019, 8, 15, 12, 33, 3))]
+2019-08-15 12:33:02,832 - AddPackage - INFO - [(108, 'Test', None, datetime.datetime(2019, 8, 15, 12, 33, 3))]
+2019-08-15 12:33:02,833 - AddPackage - INFO - Done!
+2019-08-15 12:33:46,519 - AddPackage - INFO - Insert package...
+2019-08-15 12:33:46,521 - AddPackage - ERROR - Error!
+Traceback (most recent call last):
+  File "/Users/mariatrapicyna/Desktop/EA_backend/models/package.py", line 15, in add_package
+    raise RuntimeError
+RuntimeError
+2019-08-15 12:33:46,532 - AddObject - INFO - Insert Object...
+2019-08-15 12:33:46,551 - AddObject - INFO - [(142, 'Test', None, 1, '(109, )', datetime.datetime(2019, 8, 15, 12, 33, 47))]
+2019-08-15 12:33:46,553 - AddPackage - INFO - [(109, 'Test', None, datetime.datetime(2019, 8, 15, 12, 33, 47))]
+2019-08-15 12:33:46,554 - AddPackage - INFO - Done!
+2019-08-15 12:34:05,558 - AddPackage - INFO - Insert package...
+2019-08-15 12:34:34,498 - AddPackage - INFO - Insert package...
+2019-08-15 12:36:21,086 - UpdatePackage - INFO - Program started
+2019-08-15 12:36:21,087 - UpdatePackage - INFO - Update package...
+2019-08-15 12:36:21,090 - UpdatePackage - INFO - []
+2019-08-15 12:37:15,509 - UpdatePackage - INFO - Program started
+2019-08-15 12:37:15,510 - UpdatePackage - INFO - Update package...
+2019-08-15 12:37:15,513 - UpdatePackage - INFO - []
+2019-08-15 12:38:10,081 - UpdatePackage - INFO - Program started
+2019-08-15 12:38:10,082 - UpdatePackage - INFO - Update package...
+2019-08-15 12:38:38,028 - UpdatePackage - INFO - Program started
+2019-08-15 12:38:38,028 - UpdatePackage - INFO - Update package...
+2019-08-15 12:39:54,568 - UpdatePackage - INFO - Program started
+2019-08-15 12:39:54,569 - UpdatePackage - INFO - Update package...
+2019-08-15 12:42:48,781 - UpdatePackage - INFO - Program started
+2019-08-15 12:42:48,781 - UpdatePackage - INFO - Update package...
+2019-08-15 12:45:11,051 - UpdatePackage - INFO - Program started
+2019-08-15 12:45:11,052 - UpdatePackage - INFO - Update package...
+2019-08-15 12:45:11,053 - UpdatePackage - ERROR - Don't exist this package_id
+2019-08-15 12:46:23,996 - UpdatePackage - INFO - Program started
+2019-08-15 12:46:23,996 - UpdatePackage - INFO - Update package...
+2019-08-15 12:46:23,997 - UpdatePackage - ERROR - Don't exist such package_id
+2019-08-15 12:47:29,149 - UpdatePackage - INFO - Program started
+2019-08-15 12:47:29,149 - UpdatePackage - INFO - Update package...
+2019-08-15 12:47:29,150 - UpdatePackage - ERROR - Don't exist such package_id
+2019-08-15 12:47:29,174 - UpdatePackage - INFO - [(2, 'NewPackage', None)]
+2019-08-15 12:47:29,174 - UpdatePackage - INFO - Done!
+2019-08-15 12:52:51,162 - UpdateObject - INFO - Program started
+2019-08-15 12:52:51,162 - UpdateObject - INFO - Update object...
+2019-08-15 12:52:51,164 - UpdateObject - ERROR - Don't exist such object_id
+2019-08-15 12:52:51,165 - UpdateObject - INFO - []
+2019-08-15 12:53:03,561 - UpdateObject - INFO - Program started
+2019-08-15 12:53:03,562 - UpdateObject - INFO - Update object...
+2019-08-15 12:53:03,563 - UpdateObject - ERROR - Don't exist such object_id
+2019-08-15 12:53:03,569 - UpdateObject - INFO - [(1, 'executable', 'NewPackage', '2')]
+2019-08-15 12:53:03,570 - UpdateObject - INFO - Done!

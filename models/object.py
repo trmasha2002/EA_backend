@@ -28,6 +28,14 @@ def update_object(name, stereotype, object_id):
     with connection.cursor() as cursor:
         modified_date = str(datetime.datetime.today())
         logger.info("Update object...")
+        sql = "SELECT `Object_ID` FROM `t_object`"
+        result = cursor.execute(sql, ()).fetchall()
+        good = False
+        for x in result:
+            if (x[0] == object_id):
+                good = True
+        if (not good):
+            logger.error("Don't exist such object_id")
         sql = "UPDATE `t_object` SET `Name`=?, `Stereotype`=?, `ModifiedDate`=? WHERE `Object_ID`=?" #поиск объекта по id и обновление нужных полей
         cursor.execute(sql, (name, stereotype, modified_date, object_id))
     connection.commit()
