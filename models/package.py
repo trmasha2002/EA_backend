@@ -11,6 +11,10 @@ def add_package(name, notes, stereotype, object_type, parent_id):
         logger.info("Insert package...")
         sql = "INSERT INTO `t_package` (`Name`, `Notes`, `ea_guid`, `CreatedDate`) VALUES (?, ?, ?, ?)" #добавление пакета
         cursor.execute(sql, (name, notes, ea_quid, created_date))
+        try:
+            raise RuntimeError
+        except RuntimeError:
+            logger.exception("Error!")
         sql = "SELECT `Package_ID` FROM `t_package` WHERE `ea_guid`=?"
         result = cursor.execute(sql, (ea_quid)).fetchall()
         package_id = str(result[0])
@@ -26,8 +30,10 @@ def add_package(name, notes, stereotype, object_type, parent_id):
 
 
 def update_package(name, notes, stereotype, package_id):
+    logger = logging.getLogger("UpdatePackage")
     with connection.cursor() as cursor:
         modified_data = str(datetime.datetime.today())
+        logger.info("Update package...")
         sql = "UPDATE `t_package` SET `Name`=?, `Notes`=? WHERE `Package_ID`=?"
         cursor.execute(sql, (name, notes, package_id)) #обновление пакета
         sql = "UPDATE `t_object` SET `Name`=?, `Stereotype`=?, `ModifiedDate`=?, `Note`=? WHERE `PDATA1`=?"
@@ -37,5 +43,6 @@ def update_package(name, notes, stereotype, package_id):
         sql = "SELECT `Package_ID`, `Name`, `Notes` FROM `t_package` WHERE `Package_ID`=?"
         result =cursor.execute(sql, (package_id)).fetchall()# проверка что данные объекта изменились
         print(result)
+        logger.info(result)
     return result
     connection.close()

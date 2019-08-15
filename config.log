@@ -3,3 +3,23 @@
 2019-08-12 14:13:00,266 - AddObject - INFO - [(136, 'Test', None, 1, '(107, )', datetime.datetime(2019, 8, 12, 14, 13))]
 2019-08-12 14:13:00,269 - AddPackage - INFO - [(107, 'Test', None, datetime.datetime(2019, 8, 12, 14, 13))]
 2019-08-12 14:13:00,270 - AddPackage - INFO - Done!
+2019-08-15 10:56:49,538 - UpdatePackage - INFO - Program started
+2019-08-15 10:56:49,538 - UpdatePackage - INFO - Update package...
+2019-08-15 10:56:49,543 - UpdatePackage - INFO - [(2, 'NewPackage', None)]
+2019-08-15 10:56:49,543 - UpdatePackage - INFO - Done!
+2019-08-15 11:07:28,985 - AddAttribute - INFO - Program started
+2019-08-15 11:07:28,986 - AddAttribute - INFO - Insert attribute...
+2019-08-15 11:07:29,200 - AddAttribute - INFO - [(26, 1, 'first_attibute')]
+2019-08-15 11:07:29,201 - AddAttribute - INFO - Done!
+2019-08-15 11:07:38,858 - AddConnector - INFO - Program started
+2019-08-15 11:07:38,858 - AddConnector - INFO - Add Connector...
+2019-08-15 11:07:38,880 - AddConnector - INFO - [(23, 'example', 'app-link', 12, 13)]
+2019-08-15 11:07:38,881 - AddConnector - INFO - Done
+2019-08-15 11:08:03,573 - AddDiagram - INFO - Program started
+2019-08-15 11:08:03,574 - AddDiagram - INFO - Add Diagram...
+2019-08-15 11:08:03,592 - AddDiagram - INFO - [(20, 'twelve', 6, 'package', 'pac')]
+2019-08-15 11:08:03,593 - AddDiagram - INFO - Done
+2019-08-15 11:08:18,643 - AddDiagramObjects - INFO - Program started
+2019-08-15 11:08:18,643 - AddDiagramObjects - INFO - Insert DiagramObject...
+2019-08-15 11:08:18,655 - AddDiagramObjects - INFO - [(19, 101, 100)]
+2019-08-15 11:08:18,656 - AddDiagramObjects - INFO - Done!
