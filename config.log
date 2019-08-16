@@ -96,3 +96,16 @@ RuntimeError
 2019-08-15 12:53:03,563 - UpdateObject - ERROR - Don't exist such object_id
 2019-08-15 12:53:03,569 - UpdateObject - INFO - [(1, 'executable', 'NewPackage', '2')]
 2019-08-15 12:53:03,570 - UpdateObject - INFO - Done!
+2019-08-15 13:07:13,561 - AddObject - INFO - Program started
+2019-08-15 13:07:13,561 - AddObject - INFO - Insert Object...
+2019-08-15 13:07:13,572 - AddObject - INFO - [(143, 'example', '1', 1, '1', datetime.datetime(2019, 8, 15, 13, 7, 14))]
+2019-08-15 13:07:13,573 - AddObject - INFO - Done!
+2019-08-15 13:07:23,781 - AddObject - INFO - Program started
+2019-08-15 13:07:23,781 - AddObject - INFO - Insert Object...
+2019-08-15 13:07:23,785 - AddObject - INFO - [(144, 'example', 'example', 1, '1', datetime.datetime(2019, 8, 15, 13, 7, 24))]
+2019-08-15 13:07:23,785 - AddObject - INFO - Done!
+2019-08-15 13:19:27,208 - AddPackage - INFO - Insert package...
+2019-08-15 13:19:27,213 - AddObject - INFO - Insert Object...
+2019-08-15 13:19:27,238 - AddObject - INFO - [(145, 'Test', None, 3, '(110, )', datetime.datetime(2019, 8, 15, 13, 19, 27))]
+2019-08-15 13:19:27,241 - AddPackage - INFO - [(110, 'Test', None, datetime.datetime(2019, 8, 15, 13, 19, 27))]
+2019-08-15 13:19:27,242 - AddPackage - INFO - Done!

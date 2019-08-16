@@ -3,6 +3,14 @@ import uuid
 from connection import connection
 import logging
 def add_diagram(name, package_id, stereotype, diagram_type):
+    """
+    Создание диаграммы на основе полученных данных
+    :param name: имя диаграммы
+    :param package_id: id пакета внутри которого находится диаграмма
+    :param stereotype: стереотип
+    :param diagram_type: тип диаграммы
+    :return: экземпляр на основе полученных данных
+    """
     logger = logging.getLogger("AddDiagram")
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа

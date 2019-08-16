@@ -2,6 +2,14 @@ import uuid
 import logging
 from connection import connection
 def add_connector(name, connector_type, start_objectid, end_objectid):
+    """
+    Создание конектора на основе полученных данных
+    :param name: имя конектора
+    :param connector_type: тип коннектора
+    :param start_objectid: первый id объекта между которым идет связь
+    :param end_objectid: второй id  объекта между которым идет связь
+    :return: экземляр на основе полученных данных
+    """
     logger = logging.getLogger("AddConnector")
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа

@@ -4,6 +4,15 @@ import uuid
 from models import object
 from connection import connection
 def add_package(name, notes, stereotype, object_type, parent_id):
+    """
+    Создание пакета
+    :param name: имя пакета
+    :param notes: описание пакета
+    :param stereotype: стереотип
+    :param object_type: тип объекта
+    :param parent_id: id родителя пакета
+    :return: экземпляр на основе полученных данных
+    """
     logger = logging.getLogger("AddPackage")
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа
@@ -26,6 +35,14 @@ def add_package(name, notes, stereotype, object_type, parent_id):
 
 
 def update_package(name, notes, stereotype, package_id):
+    """
+    Измененин данных пакета на основе полученных данных
+    :param name: имя пакета
+    :param notes: описание пакета
+    :param stereotype: стереоптип
+    :param package_id: id пакета
+    :return: экземпляр пакета на основе изменненых данных
+    """
     logger = logging.getLogger("UpdatePackage")
     with connection.cursor() as cursor:
         modified_data = str(datetime.datetime.today())

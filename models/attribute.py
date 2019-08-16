@@ -2,6 +2,12 @@ import uuid
 import logging
 from connection import connection
 def add_attribute(name, object_id):
+    """
+    Cоздание аттрибута на основе полученых данных
+    :param name: имя аттрибута
+    :param object_id: id объекта к которому пишется аттрибут
+    :return: экземляр на основе полученных данных
+    """
     logger = logging.getLogger("AddAttribute")
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}'#генерация уникального ключа

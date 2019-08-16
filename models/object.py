@@ -3,6 +3,16 @@ import datetime
 import logging
 from connection import connection
 def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid=""):
+    """
+    Создание объекта на основе полученных данных
+    :param name: имя объекта
+    :param stereotype: стереотип объекта
+    :param object_type: тип объекта
+    :param package_id: id добавленого пакета
+    :param parent_id: id родителя добавленого пакета
+    :param ea_quid: уникальный ключ
+    :return: экземпляр на основе полученных данных
+    """
     logger = logging.getLogger("AddObject")
     with connection.cursor() as cursor:
         logger.info("Insert Object...")#добавление объекта
@@ -24,6 +34,13 @@ def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid="")
 
 
 def update_object(name, stereotype, object_id):
+    """
+    Изменение данных объекта
+    :param name: имя объекта
+    :param stereotype: стереотип объекта
+    :param object_id: id объекта
+    :return: экземпляр измененного объекта
+    """
     logger = logging.getLogger("UpdateObject")
     with connection.cursor() as cursor:
         modified_date = str(datetime.datetime.today())

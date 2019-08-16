@@ -1,6 +1,12 @@
 from connection import connection
 import logging
 def add_diagramobjects(diagram_id, object_id):
+    """
+    Создание объекта диаграммы на основе полученных данных
+    :param diagram_id: id диаграмы
+    :param object_id: id объекта
+    :return: экземпляр диаграммы на основе полученных данных
+    """
     logger = logging.getLogger("AddDiagramObjects")
     with connection.cursor() as cursor:
         logger.info("Insert DiagramObject...")
