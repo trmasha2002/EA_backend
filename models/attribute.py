@@ -15,11 +15,32 @@ def add_attribute(name, object_id):
         sql = "INSERT INTO `t_attribute` (`Object_ID`, `ea_guid`, `Name`) VALUES (?, ?, ?)" #добавление в таблицу
         cursor.execute(sql, (object_id, ea_quid, name))
     connection.commit()
-    with connection.cursor() as cursor:
-        sql = "SELECT  `ID`, `Object_ID`, `Name` FROM `t_attribute` WHERE `ea_guid`=?" #поиск по уникальному ключу добавленного элемента
-        result = cursor.execute(sql, (ea_quid)).fetchall()
-        print(result)
-        logger.info(result)
+    result = get_by_ea_guid(ea_quid)
+    logger.info(result)
     connection.close()
     return result
+def update_attribute(name, object_id):
+    with connection.cursor() as cursor:
+        sql = "UPDATE `t_attribute` SET `Name`=? WHERE `Object_ID`=?"
+        result = cursor.execute(sql, (name, object_id))
+    connection.commit()
+    return result
 
+def get_by_ea_guid(ea_guid):
+    with connection.cursor() as cursor:
+        sql = "SELECT  `ID`, `Object_ID`, `Name` FROM `t_attribute` WHERE `ea_guid`=?" #поиск по уникальному ключу добавленного элемента
+        result = cursor.execute(sql, (ea_guid)).fetchall()
+    return result
+
+def get_by_id(id):
+    with connection.cursor() as cursor:
+        sql = "SELECT  `ID`, `Object_ID`, `Name` FROM `t_attribute` WHERE `ID`=?"  # поиск по уникальному ключу добавленного элемента
+        result = cursor.execute(sql, (id)).fetchall()
+    return result
+
+def delete_by_ea_quid(ea_guid):
+    with connection.cursor() as cursor:
+        sql = "DELETE FROM `t_attribute` WHERE `ea_guid`=?"
+        result = get_by_ea_guid(ea_guid)# поиск по уникальному ключу добавленного элемента
+        cursor.execute(sql, (ea_guid))
+    return result

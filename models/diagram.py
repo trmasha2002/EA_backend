@@ -19,12 +19,22 @@ def add_diagram(name, package_id, stereotype, diagram_type):
         sql = "INSERT INTO `t_diagram` (`Package_ID`, `Name`, `ea_guid`, `Stereotype`, `Diagram_Type`,`CreatedDate`) VALUES (?, ?, ?, ?, ?, ?)"
         cursor.execute(sql, (package_id, name, ea_quid, stereotype, diagram_type, created_date)) #добавление элемента
     connection.commit()
-    with connection.cursor() as cursor:
-        sql = "SELECT `Diagram_ID`, `Name`, `Package_ID`, `Stereotype`, `Diagram_Type` FROM `t_diagram` WHERE `ea_guid`=?" #поиск по уникальному ключу
-        result = cursor.execute(sql, (ea_quid)).fetchall()
-        print(result)
-        logger.info(result)
+    result = get_by_ea_guid(ea_quid)
+    print(result)
+    logger.info(result)
     connection.close()
     return result
 
+def get_by_ea_guid(ea_quid):
+    with connection.cursor() as cursor:
+        sql = "SELECT `Diagram_ID`, `Name`, `Package_ID`, `Stereotype`, `Diagram_Type` FROM `t_diagram` WHERE `ea_guid`=?" #поиск по уникальному ключу
+        result = cursor.execute(sql, (ea_quid)).fetchall()
+    return result
 
+def delete_by_ea_guid(ea_guid):
+    with connection.cursor() as cursor:
+        sql = "DELETE FROM `t_diagram` WHERE `ea_guid`=?"
+        result = get_by_ea_guid(ea_guid)# поиск по уникальному ключу добавленного элемента
+        cursor.execute(sql, (ea_guid))
+    connection.commit()
+    return result

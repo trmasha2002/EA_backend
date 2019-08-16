@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1812ad12-fa07-457e-ae01-2bca9269cbae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/deleteobject_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.log" beforeDir="false" afterPath="$PROJECT_DIR$/config.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/attribute.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/attribute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/connector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/diagram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/diagramobjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/diagramobjects.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/object.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/object.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/package.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/package.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/updateobject_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/updateobject_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,19 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="132" lean-forward="true" selection-start-line="131" selection-start-column="50" selection-end-line="153" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/diagramobjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="261">
+              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -52,8 +47,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/diagram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="212">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addatribute_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -64,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/connector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+            <state relative-caret-position="568">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -73,11 +80,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/package.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            <state relative-caret-position="213">
+              <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deleteobject_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/updateobject_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="15" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -88,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+            <state relative-caret-position="1224">
+              <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -97,35 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/updateobject_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/connection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/attribute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="350">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -193,14 +200,15 @@
         <option value="$PROJECT_DIR$/updatepackage_test.py" />
         <option value="$PROJECT_DIR$/addobject_test.py" />
         <option value="$PROJECT_DIR$/addpackage_test.py" />
-        <option value="$PROJECT_DIR$/models/attribute.py" />
-        <option value="$PROJECT_DIR$/models/connector.py" />
-        <option value="$PROJECT_DIR$/models/diagram.py" />
-        <option value="$PROJECT_DIR$/models/diagramobjects.py" />
         <option value="$PROJECT_DIR$/connection.py" />
         <option value="$PROJECT_DIR$/updateobject_test.py" />
-        <option value="$PROJECT_DIR$/models/object.py" />
+        <option value="$PROJECT_DIR$/deleteobject_test.py" />
         <option value="$PROJECT_DIR$/models/package.py" />
+        <option value="$PROJECT_DIR$/models/object.py" />
+        <option value="$PROJECT_DIR$/models/diagram.py" />
+        <option value="$PROJECT_DIR$/models/connector.py" />
+        <option value="$PROJECT_DIR$/models/diagramobjects.py" />
+        <option value="$PROJECT_DIR$/models/attribute.py" />
       </list>
     </option>
   </component>
@@ -246,6 +254,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -354,14 +363,25 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.6814658" visible="true" weight="0.49663526" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.31853417" side_tool="true" visible="true" weight="0.49663526" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49964765" weight="0.32791328" />
-      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49964765" weight="0.32791328" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.8231149" visible="true" weight="0.04845222" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.17688513" side_tool="true" visible="true" weight="0.04845222" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4989429" weight="0.3270525" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4982382" weight="0.3270525" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/deleteobject_test.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pymysql/__init__.py">
@@ -442,16 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addatribute_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adddiagramobject_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -489,56 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/attribute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/connector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/diagram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/diagramobjects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/updateobject_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/connection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -552,7 +512,17 @@
     <entry file="file://$PROJECT_DIR$/config.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
-          <caret line="132" lean-forward="true" selection-start-line="131" selection-start-column="50" selection-end-line="153" />
+          <caret line="132" lean-forward="true" selection-start-line="131" selection-start-column="50" selection-end-line="422" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addatribute_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -566,22 +536,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/object.py">
+    <entry file="file://$PROJECT_DIR$/updateobject_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+        <state>
+          <caret selection-end-line="15" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deleteobject_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/diagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/diagramobjects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/package.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+        <state relative-caret-position="213">
+          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/connector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/attribute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -21,16 +21,24 @@ def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid="")
         created_date = str(datetime.datetime.today())
         sql = "INSERT INTO `t_object` (`Object_Type`, `Name`, `ea_guid`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`, `ModifiedDate`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
         cursor.execute(sql, (object_type, name, ea_quid, stereotype, parent_id, package_id, created_date, created_date))
+        result = get_by_ea_guid(ea_quid)
     connection.commit()
-    with connection.cursor() as cursor:
-        sql = "SELECT `Object_ID`, `Name`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`, `ModifiedDate`  FROM `t_object` WHERE `ea_guid`=?" #поиск объекта по ключу
-        result = cursor.execute(sql, (ea_quid)).fetchall()
-        logger.info(result)
-        print(result)
+    logger.info(result)
     return result
-    connection.close()
 
+def get_by_ea_guid(ea_guid):
+    sql = "SELECT `Object_ID`, `Name`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`, `ModifiedDate`  FROM `t_object` WHERE `ea_guid`=?" #поиск объекта по ключу
+    result = connection.cursor().execute(sql, (ea_guid)).fetchall()
+    return result
 
+def get_by_id(object_id):
+    with connection.cursor() as cursor:
+        sql = "SELECT `Object_ID`, `Stereotype`, `Name`, `PDATA1` FROM `t_object` WHERE `Object_ID`=?"  # проверка что данные изменились
+        result = cursor.execute(sql, (object_id)).fetchall()
+        if (result == []):
+            return False
+        else:
+            return result
 
 
 def update_object(name, stereotype, object_id):
@@ -48,15 +56,19 @@ def update_object(name, stereotype, object_id):
         sql = "UPDATE `t_object` SET `Name`=?, `Stereotype`=?, `ModifiedDate`=? WHERE `Object_ID`=?" #поиск объекта по id и обновление нужных полей
         result = cursor.execute(sql, (name, stereotype, modified_date, object_id))
     connection.commit()
-    with connection.cursor() as cursor:
-        sql = "SELECT `Object_ID`, `Stereotype`, `Name`, `PDATA1` FROM `t_object` WHERE `Object_ID`=?" #проверка что данные изменились
-        result = cursor.execute(sql, (object_id)).fetchall()
-        if (result == []):
-            logger.error("Doesn't exist such object_id")
-            return False
+    result = get_by_id(object_id)
+    if (result == False):
+        logger.error("Doesn't exist such object id")
+    else:
         print(result)
         logger.info(result)
     return result
-    connection.close()
 
-
+def delete_by_ea_guid(ea_guid):
+    with connection.cursor() as cursor:
+        sql = "DELETE FROM `t_object` WHERE `ea_guid`=?"
+        result = get_by_ea_guid(ea_guid)
+        cursor.execute(sql, (ea_guid))
+        # поиск по уникальному ключу добавленного элемента
+    connection.commit()
+    return result

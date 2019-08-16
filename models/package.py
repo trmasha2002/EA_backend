@@ -22,18 +22,26 @@ def add_package(name, notes, stereotype, object_type, parent_id):
         cursor.execute(sql, (name, notes, ea_quid, created_date, created_date))
         sql = "SELECT `Package_ID` FROM `t_package` WHERE `ea_guid`=?"
         result = cursor.execute(sql, (ea_quid)).fetchall()
-        package_id = str(result[0])
-        object.add_object(name, stereotype, object_type, package_id, parent_id, ea_quid)
-    connection.commit()
+    package_id = str(result[0][0])
+    result = get_by_ea_guid(ea_quid)
+    print(result)
+    object.add_object(name, stereotype, object_type, package_id, parent_id, ea_quid)
+    logger.info(result)
+    result = object.get_by_ea_guid(ea_quid)
+    logger.info(result)
+    return result
+
+def get_by_ea_guid(ea_guid):
     with connection.cursor() as cursor:
         sql = "SELECT `Package_ID`, `Name`, `Notes`, `CreatedDate`, `ModifiedDate`  FROM `t_package` WHERE `ea_guid`=?" #поиск добавленого пакета по ключу
-        result = cursor.execute(sql, ea_quid).fetchall()
-        print(result)
-        logger.info(result)
+        result = cursor.execute(sql, ea_guid).fetchall()
     return result
-    connection.close()
 
-
+def get_by_id(package_id):
+    with connection.cursor() as cursor:
+        sql = "SELECT `Package_ID`, `Name`, `Notes` FROM `t_package` WHERE `Package_ID`=?"
+        result = cursor.execute(sql, (package_id)).fetchall()  # проверка что данные объекта изменились
+    return result
 def update_package(name, notes, stereotype, package_id):
     """
     Измененин данных пакета на основе полученных данных
@@ -53,11 +61,14 @@ def update_package(name, notes, stereotype, package_id):
         result = cursor.execute(sql, (package_id)).fetchall()
         object_id = result[0][0]
         object.update_object(name, stereotype, object_id)
-    connection.commit()
-    with connection.cursor() as cursor:
-        sql = "SELECT `Package_ID`, `Name`, `Notes` FROM `t_package` WHERE `Package_ID`=?"
-        result = cursor.execute(sql, (package_id)).fetchall()# проверка что данные объекта изменились
-        print(result)
-        logger.info(result)
+    print(result)
+    logger.info(result)
     return result
-    connection.close()
+
+def delete_by_ea_guid(ea_guid):
+    with connection.cursor() as cursor:
+        sql = "DELETE FROM `t_package` WHERE `ea_guid`=?"
+        result = get_by_ea_guid(ea_guid)# поиск по уникальному ключу добавленного элемента
+        cursor.execute(sql, (ea_guid))
+    connection.commit()
+    return result
