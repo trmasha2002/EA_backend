@@ -38,3 +38,11 @@ def delete_by_ea_guid(ea_guid):
         cursor.execute(sql, (ea_guid))
     connection.commit()
     return result
+
+def update_by_ea_guid(name, stereotype, diagram_type, ea_guid):
+    with connection.cursor() as cursor:
+        sql = "UPDATE `t_diagram` SET `Name`=?, `Stereotype`=?, `Diagram_Type`=? WHERE ea_guid=?"
+        cursor.execute(sql, (name, stereotype, diagram_type, ea_guid))
+        connection.commit()
+        result = get_by_ea_guid(ea_guid)
+    return result
