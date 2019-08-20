@@ -32,12 +32,22 @@ def add_package(name, notes, stereotype, object_type, parent_id):
     return result
 
 def get_by_ea_guid(ea_guid):
+    """
+    Получение по ключу
+    :param ea_guid: уникальный ключ
+    :return: экземпляра
+    """
     with connection.cursor() as cursor:
         sql = "SELECT `Package_ID`, `Name`, `Notes`, `CreatedDate`, `ModifiedDate`  FROM `t_package` WHERE `ea_guid`=?" #поиск добавленого пакета по ключу
         result = cursor.execute(sql, ea_guid).fetchall()
     return result
 
 def get_by_id(package_id):
+    """
+    Получение по id
+    :param package_id: id
+    :return: экземпляра
+    """
     with connection.cursor() as cursor:
         sql = "SELECT `Package_ID`, `Name`, `Notes` FROM `t_package` WHERE `Package_ID`=?"
         result = cursor.execute(sql, (package_id)).fetchall()  # проверка что данные объекта изменились
@@ -66,6 +76,11 @@ def update_package(name, notes, stereotype, package_id):
     return result
 
 def delete_by_ea_guid(ea_guid):
+    """
+    Удаление по уникальному ключу
+    :param ea_guid: ключ
+    :return: возращение удаленного объекта
+    """
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_package` WHERE `ea_guid`=?"
         result = get_by_ea_guid(ea_guid)# поиск по уникальному ключу добавленного элемента

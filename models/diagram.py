@@ -26,12 +26,22 @@ def add_diagram(name, package_id, stereotype, diagram_type):
     return result
 
 def get_by_ea_guid(ea_quid):
+    """
+    Получение экземпляра по ключу
+    :param ea_quid: уникальный ключ
+    :return:
+    """
     with connection.cursor() as cursor:
         sql = "SELECT `Diagram_ID`, `Name`, `Package_ID`, `Stereotype`, `Diagram_Type` FROM `t_diagram` WHERE `ea_guid`=?" #поиск по уникальному ключу
         result = cursor.execute(sql, (ea_quid)).fetchall()
     return result
 
 def delete_by_ea_guid(ea_guid):
+    """
+    Удаление по ключу
+    :param ea_guid: уникальный
+    :return:
+    """
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_diagram` WHERE `ea_guid`=?"
         result = get_by_ea_guid(ea_guid)# поиск по уникальному ключу добавленного элемента
@@ -40,6 +50,14 @@ def delete_by_ea_guid(ea_guid):
     return result
 
 def update_by_ea_guid(name, stereotype, diagram_type, ea_guid):
+    """
+    Обновление диаграммы на основе полученнных данных
+    :param name: имя
+    :param stereotype: стереотип
+    :param diagram_type: тип диаграммы
+    :param ea_guid: уникальный ключ
+    :return: обновленного элемента на основе полученных данных
+    """
     with connection.cursor() as cursor:
         sql = "UPDATE `t_diagram` SET `Name`=?, `Stereotype`=?, `Diagram_Type`=? WHERE ea_guid=?"
         cursor.execute(sql, (name, stereotype, diagram_type, ea_guid))

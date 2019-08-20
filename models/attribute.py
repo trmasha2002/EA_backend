@@ -20,6 +20,12 @@ def add_attribute(name, object_id):
     connection.close()
     return result
 def update_attribute(name, object_id):
+    """
+    Обновление атрибута
+    :param name: имя атрибута
+    :param object_id: id объекта
+    :return: обновленого атрибута на основе полученных данных
+    """
     with connection.cursor() as cursor:
         sql = "UPDATE `t_attribute` SET `Name`=? WHERE `Object_ID`=?"
         result = cursor.execute(sql, (name, object_id))
@@ -27,18 +33,33 @@ def update_attribute(name, object_id):
     return result
 
 def get_by_ea_guid(ea_guid):
+    """
+    Получение по уникальному ключу
+    :param ea_guid: уникальный ключ
+    :return: экземпляра на основе ключа
+    """
     with connection.cursor() as cursor:
         sql = "SELECT  `ID`, `Object_ID`, `Name` FROM `t_attribute` WHERE `ea_guid`=?" #поиск по уникальному ключу добавленного элемента
         result = cursor.execute(sql, (ea_guid)).fetchall()
     return result
 
 def get_by_id(id):
+    """
+    Получение по id
+    :param id: id
+    :return: экземпляр на основе полученных данных
+    """
     with connection.cursor() as cursor:
         sql = "SELECT  `ID`, `Object_ID`, `Name` FROM `t_attribute` WHERE `ID`=?"  # поиск по уникальному ключу добавленного элемента
         result = cursor.execute(sql, (id)).fetchall()
     return result
 
 def delete_by_ea_quid(ea_guid):
+    """
+    Удаление по уникальному ключу
+     :param ea_guid: уникальный ключ
+     :return: удаленного экземпляра на основе уникального ключа
+    """
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_attribute` WHERE `ea_guid`=?"
         result = get_by_ea_guid(ea_guid)# поиск по уникальному ключу добавленного элемента

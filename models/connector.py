@@ -22,6 +22,11 @@ def add_connector(name, connector_type, start_objectid, end_objectid):
     return result
 
 def get_by_ea_quid(ea_quid):
+    """
+    Получить экземпляр по ключу
+    :param ea_quid: ключ
+    :return: экземпляр на основе полученных данных
+    """
     with connection.cursor() as cursor:
         sql = "SELECT `Connector_ID`, `Name`, `Connector_Type`, `Start_Object_ID`, `End_Object_ID` FROM `t_connector` WHERE `ea_guid`=?" #поиск по уникальному ключу
         result = cursor.execute(sql, (ea_quid)).fetchall()
@@ -29,6 +34,15 @@ def get_by_ea_quid(ea_quid):
     return result
 
 def update_by_ea_guid(ea_quid, name, connector_type, start_objectid, end_objectid):
+    """
+    Обновление по ключу
+    :param ea_quid: уникальный ключ
+    :param name: имя
+    :param connector_type: тип конектора
+    :param start_objectid: первый id
+    :param end_objectid: второй id
+    :return: измененного экземпляра на основе полученных данных
+    """
     with connection.cursor() as cursor:
         sql = "UPDATE `t_connector` SET `Name`=?, `Connector_Type`=?, `Start_Object_ID`=?, `End_Object_ID`=? WHERE ea_guid=?"
         cursor.execute(sql, (name, connector_type, start_objectid, end_objectid, ea_quid))
@@ -37,6 +51,11 @@ def update_by_ea_guid(ea_quid, name, connector_type, start_objectid, end_objecti
     return result
 
 def delete_by_ea_guid(ea_guid):
+    """
+    Удаление экземпляра на основе ключа
+    :param ea_guid: уникальный ключ
+    :return: удаленного экземпляра
+    """
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_connector` WHERE `ea_guid`=?"
         result = get_by_ea_quid(ea_guid)# поиск по уникальному ключу добавленного элемента

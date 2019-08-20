@@ -21,6 +21,11 @@ def add_diagramobjects(diagram_id, object_id):
     connection.close()
     return result
 def get_by_id(instance_id):
+    """
+    Получение по id
+    :param instance_id:
+    :return:
+    """
     with connection.cursor() as cursor:
         sql = "SELECT `Instance_ID`, `Object_ID`, `Diagram_ID` FROM `t_diagramobjects` WHERE `Instance_ID`=?" #поиск последнего добавленого элемента
         result = cursor.execute(sql, (instance_id)).fetchall()
@@ -28,6 +33,11 @@ def get_by_id(instance_id):
 
 
 def delete_by_ea_instance_id(instance_id):
+    """
+    Удалить по id
+    :param instance_id: id элемента
+    :return: удаленного экземпляра
+    """
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_diagramobjects` WHERE `Instance_ID`=?"
         result = get_by_id(instance_id)# поиск по уникальному ключу добавленного элемента
@@ -36,6 +46,13 @@ def delete_by_ea_instance_id(instance_id):
     return result
 
 def update_by_ea_guid(object_id, diagram_id, instance_id):
+    """
+    Обновление по ключу
+    :param object_id: id объекта
+    :param diagram_id: id диаграммы
+    :param instance_id: id объекта диаграммы
+    :return:
+    """
     with connection.cursor() as cursor:
         sql = "UPDATE `t_diagramobjects` SET `Object_ID`=?, `Diagram_ID`=? WHERE Instance_ID=?"
         cursor.execute(sql, (object_id, diagram_id, instance_id))

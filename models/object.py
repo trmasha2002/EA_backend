@@ -27,11 +27,21 @@ def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid="")
     return result
 
 def get_by_ea_guid(ea_guid):
+    """
+    Получение по уникальному ключу
+    :param ea_guid: уникальный ключ
+    :return: экземпляра по уникальному ключу
+    """
     sql = "SELECT `Object_ID`, `Name`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`, `ModifiedDate`  FROM `t_object` WHERE `ea_guid`=?" #поиск объекта по ключу
     result = connection.cursor().execute(sql, (ea_guid)).fetchall()
     return result
 
 def get_by_id(object_id):
+    """
+    Получить по id экземпляра
+    :param object_id: id объекта
+    :return:
+    """
     with connection.cursor() as cursor:
         sql = "SELECT `Object_ID`, `Stereotype`, `Name`, `PDATA1` FROM `t_object` WHERE `Object_ID`=?"  # проверка что данные изменились
         result = cursor.execute(sql, (object_id)).fetchall()
@@ -65,6 +75,11 @@ def update_object(name, stereotype, object_id):
     return result
 
 def delete_by_ea_guid(ea_guid):
+    """
+    Удаление по ключу
+    :param ea_guid:
+    :return:
+    """
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_object` WHERE `ea_guid`=?"
         result = get_by_ea_guid(ea_guid)
