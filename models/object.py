@@ -13,7 +13,7 @@ def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid="")
     :param ea_quid: уникальный ключ
     :return: экземпляр на основе полученных данных
     """
-    logger = logging.getLogger("AddObject")
+    logger = logging.getLogger("Object")
     with connection.cursor() as cursor:
         logger.info("Insert Object...")#добавление объекта
         if (ea_quid == '' or ea_quid == None):
@@ -23,7 +23,6 @@ def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid="")
         cursor.execute(sql, (object_type, name, ea_quid, stereotype, parent_id, package_id, created_date, created_date))
         result = get_by_ea_guid(ea_quid)
     connection.commit()
-    logger.info(result)
     return result
 
 def get_by_ea_guid(ea_guid):
@@ -32,8 +31,11 @@ def get_by_ea_guid(ea_guid):
     :param ea_guid: уникальный ключ
     :return: экземпляра по уникальному ключу
     """
+    logger = logging.getLogger("Object")
+    logger.info("Get object by ea_guid")
     sql = "SELECT `Object_ID`, `Name`, `Stereotype`, `Package_ID`, `PDATA1`, `CreatedDate`, `ModifiedDate`  FROM `t_object` WHERE `ea_guid`=?" #поиск объекта по ключу
     result = connection.cursor().execute(sql, (ea_guid)).fetchall()
+    logger.info(result)
     return result
 
 def get_by_id(object_id):
@@ -42,12 +44,16 @@ def get_by_id(object_id):
     :param object_id: id объекта
     :return:
     """
+    logger = logging.getLogger("Object")
+    logger.info("Get object by id")
     with connection.cursor() as cursor:
         sql = "SELECT `Object_ID`, `Stereotype`, `Name`, `PDATA1` FROM `t_object` WHERE `Object_ID`=?"  # проверка что данные изменились
         result = cursor.execute(sql, (object_id)).fetchall()
         if (result == []):
+            logger.error("Doesn't such object_id")
             return False
         else:
+            logger.info(result)
             return result
 
 
@@ -59,7 +65,7 @@ def update_object(name, stereotype, object_id):
     :param object_id: id объекта
     :return: экземпляр измененного объекта
     """
-    logger = logging.getLogger("UpdateObject")
+    logger = logging.getLogger("Object")
     with connection.cursor() as cursor:
         modified_date = str(datetime.datetime.today())
         logger.info("Update object...")
@@ -67,11 +73,6 @@ def update_object(name, stereotype, object_id):
         result = cursor.execute(sql, (name, stereotype, modified_date, object_id))
     connection.commit()
     result = get_by_id(object_id)
-    if (result == False):
-        logger.error("Doesn't exist such object id")
-    else:
-        print(result)
-        logger.info(result)
     return result
 
 def delete_by_ea_guid(ea_guid):
@@ -80,6 +81,8 @@ def delete_by_ea_guid(ea_guid):
     :param ea_guid:
     :return:
     """
+    logger = logging.getLogger("Object")
+    logger.info("Delete object by ea_guid")
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_object` WHERE `ea_guid`=?"
         result = get_by_ea_guid(ea_guid)

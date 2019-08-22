@@ -10,7 +10,7 @@ def add_connector(name, connector_type, start_objectid, end_objectid):
     :param end_objectid: второй id  объекта между которым идет связь
     :return: экземляр на основе полученных данных
     """
-    logger = logging.getLogger("AddConnector")
+    logger = logging.getLogger("Connector")
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа
         logger.info("Add Connector...")
@@ -18,7 +18,6 @@ def add_connector(name, connector_type, start_objectid, end_objectid):
         cursor.execute(sql, (name, ea_quid, connector_type, start_objectid, end_objectid))
     connection.commit()
     result = get_by_ea_quid(ea_quid)
-    logger.info(result)
     return result
 
 def get_by_ea_quid(ea_quid):
@@ -27,10 +26,12 @@ def get_by_ea_quid(ea_quid):
     :param ea_quid: ключ
     :return: экземпляр на основе полученных данных
     """
+    logger = logging.getLogger("Connector")
+    logger.info("Get connector by ea_guid")
     with connection.cursor() as cursor:
         sql = "SELECT `Connector_ID`, `Name`, `Connector_Type`, `Start_Object_ID`, `End_Object_ID` FROM `t_connector` WHERE `ea_guid`=?" #поиск по уникальному ключу
         result = cursor.execute(sql, (ea_quid)).fetchall()
-        print(result)
+    logger.info(result)
     return result
 
 def update_by_ea_guid(ea_quid, name, connector_type, start_objectid, end_objectid):
@@ -43,6 +44,8 @@ def update_by_ea_guid(ea_quid, name, connector_type, start_objectid, end_objecti
     :param end_objectid: второй id
     :return: измененного экземпляра на основе полученных данных
     """
+    logger = logging.getLogger("Connector")
+    logger.info("Update connector by ea_guid")
     with connection.cursor() as cursor:
         sql = "UPDATE `t_connector` SET `Name`=?, `Connector_Type`=?, `Start_Object_ID`=?, `End_Object_ID`=? WHERE ea_guid=?"
         cursor.execute(sql, (name, connector_type, start_objectid, end_objectid, ea_quid))
@@ -56,6 +59,8 @@ def delete_by_ea_guid(ea_guid):
     :param ea_guid: уникальный ключ
     :return: удаленного экземпляра
     """
+    logger = logging.getLogger("Connector")
+    logger.info("Delete connector by ea_guid")
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_connector` WHERE `ea_guid`=?"
         result = get_by_ea_quid(ea_guid)# поиск по уникальному ключу добавленного элемента

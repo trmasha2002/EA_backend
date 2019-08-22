@@ -420,3 +420,322 @@ RuntimeError
 2019-08-17 00:31:51,302 - AddPackage - INFO - [(143, 'Test', None, datetime.datetime(2019, 8, 17, 0, 31, 51), datetime.datetime(2019, 8, 17, 0, 31, 51))]
 2019-08-17 00:31:51,411 - AddPackage - INFO - [(183, 'Test', None, 1, '143', datetime.datetime(2019, 8, 17, 0, 31, 51), datetime.datetime(2019, 8, 17, 0, 31, 51))]
 2019-08-17 00:31:51,411 - AddPackage - INFO - Done!
+2019-08-22 14:56:46,565 - Attribute - INFO - Program started
+2019-08-22 14:56:46,566 - Attribute - INFO - Insert attribute...
+2019-08-22 14:56:46,578 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 14:56:46,581 - Attribute - INFO - [(41, 1, 'first_attibute')]
+2019-08-22 14:56:46,581 - Attribute - INFO - [(41, 1, 'first_attibute')]
+2019-08-22 14:56:46,581 - Attribute - INFO - Done!
+2019-08-22 14:56:46,583 - Attribute - INFO - Program started
+2019-08-22 14:56:46,585 - Attribute - INFO - Program started
+2019-08-22 14:56:46,586 - Attribute - INFO - Update attribute...
+2019-08-22 14:56:46,587 - Attribute - INFO - <pyodbc.Cursor object at 0x10a4402b0>
+2019-08-22 14:56:46,587 - Attribute - INFO - Done!
+2019-08-22 14:59:21,836 - Attribute - INFO - Program started
+2019-08-22 14:59:21,836 - Attribute - INFO - Insert attribute...
+2019-08-22 14:59:21,840 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 14:59:21,841 - Attribute - INFO - [(42, 1, 'first_attibute')]
+2019-08-22 14:59:21,841 - Attribute - INFO - [(42, 1, 'first_attibute')]
+2019-08-22 14:59:21,842 - Attribute - INFO - Done!
+2019-08-22 14:59:21,844 - Attribute - INFO - Program started
+2019-08-22 14:59:21,844 - Attribute - INFO - Delete attribute by ea_guid
+2019-08-22 14:59:21,844 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 14:59:21,845 - Attribute - INFO - [(3, 21, 'first')]
+2019-08-22 14:59:21,849 - Attribute - INFO - [(3, 21, 'first')]
+2019-08-22 14:59:21,849 - Attribute - INFO - Done!
+2019-08-22 14:59:21,852 - Attribute - INFO - Program started
+2019-08-22 14:59:21,852 - Attribute - INFO - Update attribute...
+2019-08-22 14:59:21,853 - Attribute - INFO - <pyodbc.Cursor object at 0x10bca01b0>
+2019-08-22 14:59:21,853 - Attribute - INFO - Done!
+2019-08-22 15:00:29,187 - Attribute - INFO - Program started
+2019-08-22 15:00:29,188 - Attribute - INFO - Insert attribute...
+2019-08-22 15:00:29,190 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 15:00:29,192 - Attribute - INFO - [(43, 1, 'first_attibute')]
+2019-08-22 15:00:29,192 - Attribute - INFO - [(43, 1, 'first_attibute')]
+2019-08-22 15:00:29,192 - Attribute - INFO - Done!
+2019-08-22 15:00:29,198 - Attribute - INFO - Program started
+2019-08-22 15:00:29,198 - Attribute - INFO - Delete attribute by ea_guid
+2019-08-22 15:00:29,199 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 15:00:29,200 - Attribute - INFO - []
+2019-08-22 15:00:29,202 - Attribute - INFO - []
+2019-08-22 15:00:29,202 - Attribute - INFO - Done!
+2019-08-22 15:00:29,205 - Attribute - INFO - Program started
+2019-08-22 15:00:29,205 - Attribute - INFO - Update attribute...
+2019-08-22 15:00:29,206 - Attribute - INFO - Get attribute by id
+2019-08-22 15:00:29,208 - Attribute - INFO - [(1, 3, 'second')]
+2019-08-22 15:00:29,208 - Attribute - INFO - [(1, 3, 'second')]
+2019-08-22 15:00:29,208 - Attribute - INFO - Done!
+2019-08-22 15:01:15,683 - Attribute - INFO - Program started
+2019-08-22 15:01:15,684 - Attribute - INFO - Insert attribute...
+2019-08-22 15:01:15,687 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 15:01:15,688 - Attribute - INFO - [(44, 1, 'first_attibute')]
+2019-08-22 15:01:15,689 - Attribute - INFO - [(44, 1, 'first_attibute')]
+2019-08-22 15:01:15,689 - Attribute - INFO - Done!
+2019-08-22 15:01:15,691 - Attribute - INFO - Program started
+2019-08-22 15:01:15,691 - Attribute - INFO - Delete attribute by ea_guid
+2019-08-22 15:01:15,691 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 15:01:15,692 - Attribute - INFO - []
+2019-08-22 15:01:15,693 - Attribute - INFO - Done!
+2019-08-22 15:01:15,695 - Attribute - INFO - Program started
+2019-08-22 15:01:15,695 - Attribute - INFO - Update attribute...
+2019-08-22 15:01:15,696 - Attribute - INFO - Get attribute by id
+2019-08-22 15:01:15,697 - Attribute - INFO - [(1, 3, 'second')]
+2019-08-22 15:01:15,697 - Attribute - INFO - Done!
+2019-08-22 15:01:25,096 - Attribute - INFO - Program started
+2019-08-22 15:01:25,096 - Attribute - INFO - Insert attribute...
+2019-08-22 15:01:25,099 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 15:01:25,101 - Attribute - INFO - [(45, 1, 'first_attibute')]
+2019-08-22 15:01:25,101 - Attribute - INFO - Done!
+2019-08-22 15:01:25,103 - Attribute - INFO - Program started
+2019-08-22 15:01:25,103 - Attribute - INFO - Delete attribute by ea_guid
+2019-08-22 15:01:25,103 - Attribute - INFO - Get attribute by ea_guid
+2019-08-22 15:01:25,105 - Attribute - INFO - []
+2019-08-22 15:01:25,106 - Attribute - INFO - Done!
+2019-08-22 15:01:25,109 - Attribute - INFO - Program started
+2019-08-22 15:01:25,109 - Attribute - INFO - Update attribute...
+2019-08-22 15:01:25,110 - Attribute - INFO - Get attribute by id
+2019-08-22 15:01:25,112 - Attribute - INFO - [(1, 3, 'second')]
+2019-08-22 15:01:25,113 - Attribute - INFO - Done!
+2019-08-22 15:08:00,422 - Connector - INFO - Program started
+2019-08-22 15:08:00,422 - Connector - INFO - Add Connector...
+2019-08-22 15:08:00,425 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:08:00,426 - Connector - INFO - [(36, 'example', 'app-link', 12, 13)]
+2019-08-22 15:08:00,426 - Connector - INFO - Done!
+2019-08-22 15:08:00,429 - Connector - INFO - Program started
+2019-08-22 15:08:00,429 - Connector - INFO - Delete connector by ea_guid
+2019-08-22 15:08:00,430 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:08:00,430 - Connector - INFO - []
+2019-08-22 15:08:00,434 - Connector - INFO - Program started
+2019-08-22 15:08:00,434 - Connector - INFO - Update connector by ea_guid
+2019-08-22 15:08:00,435 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:08:00,435 - Connector - INFO - [(26, 'second', 'app', 13, 14)]
+2019-08-22 15:08:00,436 - Connector - INFO - Done!
+2019-08-22 15:09:07,297 - Connector - INFO - Program started
+2019-08-22 15:09:07,297 - Connector - INFO - Add Connector...
+2019-08-22 15:09:07,301 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:09:07,303 - Connector - INFO - [(37, 'example', 'app-link', 12, 13)]
+2019-08-22 15:09:07,303 - Connector - INFO - Done!
+2019-08-22 15:09:07,307 - Connector - INFO - Program started
+2019-08-22 15:09:07,307 - Connector - INFO - Delete connector by ea_guid
+2019-08-22 15:09:07,307 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:09:07,308 - Connector - INFO - [(2, 'example', 'app-link', 12, 13)]
+2019-08-22 15:09:07,310 - Connector - INFO - Done!
+2019-08-22 15:09:07,314 - Connector - INFO - Program started
+2019-08-22 15:09:07,314 - Connector - INFO - Update connector by ea_guid
+2019-08-22 15:09:07,315 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:09:07,317 - Connector - INFO - [(26, 'second', 'app', 13, 14)]
+2019-08-22 15:09:07,317 - Connector - INFO - Done!
+2019-08-22 15:10:10,410 - Connector - INFO - Program started
+2019-08-22 15:10:10,411 - Connector - INFO - Add Connector...
+2019-08-22 15:10:10,414 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:10:10,415 - Connector - INFO - [(38, 'example', 'app-link', 12, 13)]
+2019-08-22 15:10:10,416 - Connector - INFO - Done!
+2019-08-22 15:10:10,418 - Connector - INFO - Program started
+2019-08-22 15:10:10,418 - Connector - INFO - Delete connector by ea_guid
+2019-08-22 15:10:10,418 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:10:10,419 - Connector - INFO - [(6, 'example', 'app-link', 12, 13)]
+2019-08-22 15:10:10,421 - Connector - INFO - Done!
+2019-08-22 15:10:10,424 - Connector - INFO - Program started
+2019-08-22 15:10:10,424 - Connector - INFO - Update connector by ea_guid
+2019-08-22 15:10:10,425 - Connector - INFO - Get connector by ea_guid
+2019-08-22 15:10:10,426 - Connector - INFO - [(26, 'second', 'app', 13, 14)]
+2019-08-22 15:10:10,426 - Connector - INFO - Done!
+2019-08-22 15:10:34,022 - Diagram - INFO - Program started
+2019-08-22 15:10:34,022 - Diagram - INFO - Add Diagram...
+2019-08-22 15:10:34,026 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:10:34,027 - Diagram - INFO - [(28, 'twelve', 6, 'package', 'pac')]
+2019-08-22 15:10:34,027 - Diagram - INFO - Done!
+2019-08-22 15:10:34,030 - Diagram - INFO - Program started
+2019-08-22 15:10:34,030 - Diagram - INFO - Delete diagram by ea_guid
+2019-08-22 15:10:34,030 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:10:34,031 - Diagram - INFO - []
+2019-08-22 15:10:34,036 - Diagram - INFO - Program started
+2019-08-22 15:10:34,038 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:10:34,038 - Diagram - INFO - [(20, 'name', 6, 'stereotype', 'app-link')]
+2019-08-22 15:10:34,039 - Diagram - INFO - Done!
+2019-08-22 15:11:03,522 - Diagram - INFO - Program started
+2019-08-22 15:11:03,523 - Diagram - INFO - Add Diagram...
+2019-08-22 15:11:03,529 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:11:03,530 - Diagram - INFO - [(29, 'twelve', 6, 'package', 'pac')]
+2019-08-22 15:11:03,530 - Diagram - INFO - Done!
+2019-08-22 15:11:03,533 - Diagram - INFO - Program started
+2019-08-22 15:11:03,533 - Diagram - INFO - Delete diagram by ea_guid
+2019-08-22 15:11:03,533 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:11:03,534 - Diagram - INFO - [(2, 'Package6', 18, 'stereotype12', 'Package')]
+2019-08-22 15:11:03,536 - Diagram - INFO - Done!
+2019-08-22 15:11:03,538 - Diagram - INFO - Program started
+2019-08-22 15:11:03,539 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:11:03,540 - Diagram - INFO - [(20, 'name', 6, 'stereotype', 'app-link')]
+2019-08-22 15:11:03,541 - Diagram - INFO - Done!
+2019-08-22 15:12:11,034 - Diagram - INFO - Program started
+2019-08-22 15:12:11,035 - Diagram - INFO - Add Diagram...
+2019-08-22 15:12:11,038 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:12:11,040 - Diagram - INFO - [(30, 'twelve', 6, 'package', 'pac')]
+2019-08-22 15:12:11,040 - Diagram - INFO - Done!
+2019-08-22 15:12:11,043 - Diagram - INFO - Program started
+2019-08-22 15:12:11,043 - Diagram - INFO - Delete diagram by ea_guid
+2019-08-22 15:12:11,043 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:12:11,044 - Diagram - INFO - []
+2019-08-22 15:12:11,047 - Diagram - INFO - Program started
+2019-08-22 15:12:11,047 - Diagram - INFO - Update diagram by ea_guid
+2019-08-22 15:12:11,048 - Diagram - INFO - Get diagram by ea_guid
+2019-08-22 15:12:11,049 - Diagram - INFO - [(20, 'name', 6, 'stereotype', 'app-link')]
+2019-08-22 15:12:11,049 - Diagram - INFO - Done!
+2019-08-22 15:15:54,710 - DiagramObjects - INFO - Program started
+2019-08-22 15:15:54,710 - DiagramObjects - INFO - Insert DiagramObject...
+2019-08-22 15:15:54,717 - DiagramObjects - INFO - [(30, 101, 100)]
+2019-08-22 15:15:54,717 - DiagramObjects - INFO - Done!
+2019-08-22 15:15:54,737 - DiagramObjects - INFO - Program started
+2019-08-22 15:15:54,745 - DiagramObjects - INFO - Program started
+2019-08-22 15:15:54,745 - DiagramObjects - INFO - Update diagramobject by id
+2019-08-22 15:15:54,748 - DiagramObjects - INFO - [(2, 110, 111)]
+2019-08-22 15:15:54,748 - DiagramObjects - INFO - Done!
+2019-08-22 15:16:22,236 - DiagramObjects - INFO - Program started
+2019-08-22 15:16:22,236 - DiagramObjects - INFO - Insert DiagramObject...
+2019-08-22 15:16:22,244 - DiagramObjects - INFO - [(31, 101, 100)]
+2019-08-22 15:16:22,244 - DiagramObjects - INFO - Done!
+2019-08-22 15:16:22,247 - DiagramObjects - INFO - Program started
+2019-08-22 15:16:22,249 - DiagramObjects - INFO - Done!
+2019-08-22 15:16:22,253 - DiagramObjects - INFO - Program started
+2019-08-22 15:16:22,253 - DiagramObjects - INFO - Update diagramobject by id
+2019-08-22 15:16:22,255 - DiagramObjects - INFO - [(2, 110, 111)]
+2019-08-22 15:16:22,255 - DiagramObjects - INFO - Done!
+2019-08-22 15:18:12,044 - DiagramObjects - INFO - Program started
+2019-08-22 15:18:12,044 - DiagramObjects - INFO - Insert DiagramObject...
+2019-08-22 15:18:12,050 - DiagramObjects - INFO - Done!
+2019-08-22 15:18:12,052 - DiagramObjects - INFO - Program started
+2019-08-22 15:18:12,052 - DiagramObjects - INFO - Delete diagramobject by instance_id...
+2019-08-22 15:18:12,054 - DiagramObjects - INFO - Done!
+2019-08-22 15:18:12,057 - DiagramObjects - INFO - Program started
+2019-08-22 15:18:12,057 - DiagramObjects - INFO - Update diagramobject by id
+2019-08-22 15:18:12,058 - DiagramObjects - INFO - Done!
+2019-08-22 15:19:07,837 - DiagramObjects - INFO - Program started
+2019-08-22 15:19:07,837 - DiagramObjects - INFO - Insert DiagramObject...
+2019-08-22 15:19:07,840 - DiagramObjects - INFO - Get diagramobject by instance_id...
+2019-08-22 15:19:07,844 - DiagramObjects - INFO - [(33, 101, 100)]
+2019-08-22 15:19:07,844 - DiagramObjects - INFO - Done!
+2019-08-22 15:19:07,848 - DiagramObjects - INFO - Program started
+2019-08-22 15:19:07,848 - DiagramObjects - INFO - Delete diagramobject by instance_id...
+2019-08-22 15:19:07,848 - DiagramObjects - INFO - Get diagramobject by instance_id...
+2019-08-22 15:19:07,849 - DiagramObjects - INFO - [(32, 101, 100)]
+2019-08-22 15:19:07,851 - DiagramObjects - INFO - Done!
+2019-08-22 15:19:07,855 - DiagramObjects - INFO - Program started
+2019-08-22 15:19:07,855 - DiagramObjects - INFO - Update diagramobject by id
+2019-08-22 15:19:07,856 - DiagramObjects - INFO - Get diagramobject by instance_id...
+2019-08-22 15:19:07,857 - DiagramObjects - INFO - [(2, 110, 111)]
+2019-08-22 15:19:07,857 - DiagramObjects - INFO - Done!
+2019-08-22 15:22:06,177 - Object - INFO - Program started
+2019-08-22 15:22:06,177 - Object - INFO - Insert Object...
+2019-08-22 15:22:06,179 - Object - INFO - Get object by ea_guid
+2019-08-22 15:22:06,182 - Object - INFO - [(188, 'example', 'example', 1, '1', datetime.datetime(2019, 8, 22, 15, 22, 6), datetime.datetime(2019, 8, 22, 15, 22, 6))]
+2019-08-22 15:22:06,183 - Object - INFO - Done!
+2019-08-22 15:22:06,186 - Object - INFO - Program started
+2019-08-22 15:22:06,186 - Object - INFO - Delete object by ea_guid
+2019-08-22 15:22:06,186 - Object - INFO - Get object by ea_guid
+2019-08-22 15:22:06,187 - Object - INFO - []
+2019-08-22 15:22:06,191 - Object - INFO - Program started
+2019-08-22 15:22:06,191 - Object - INFO - Update object...
+2019-08-22 15:22:06,193 - Object - INFO - Get object by id
+2019-08-22 15:22:06,194 - Object - INFO - [(3, 'executable', 'second', None)]
+2019-08-22 15:22:06,195 - Object - INFO - Done!
+2019-08-22 15:22:34,536 - Object - INFO - Program started
+2019-08-22 15:22:34,536 - Object - INFO - Insert Object...
+2019-08-22 15:22:34,538 - Object - INFO - Get object by ea_guid
+2019-08-22 15:22:34,538 - Object - INFO - [(189, 'example', 'example', 1, '1', datetime.datetime(2019, 8, 22, 15, 22, 35), datetime.datetime(2019, 8, 22, 15, 22, 35))]
+2019-08-22 15:22:34,541 - Object - INFO - Done!
+2019-08-22 15:22:34,544 - Object - INFO - Program started
+2019-08-22 15:22:34,544 - Object - INFO - Delete object by ea_guid
+2019-08-22 15:22:34,544 - Object - INFO - Get object by ea_guid
+2019-08-22 15:22:34,545 - Object - INFO - [(11, 'Package2', None, 0, None, None, None)]
+2019-08-22 15:22:34,546 - Object - INFO - Done!
+2019-08-22 15:22:34,549 - Object - INFO - Program started
+2019-08-22 15:22:34,549 - Object - INFO - Update object...
+2019-08-22 15:22:34,552 - Object - INFO - Get object by id
+2019-08-22 15:22:34,553 - Object - INFO - [(3, 'executable', 'second', None)]
+2019-08-22 15:22:34,553 - Object - INFO - Done!
+2019-08-22 15:33:27,230 - Object - INFO - Program started
+2019-08-22 15:33:27,232 - Object - INFO - Insert Object...
+2019-08-22 15:33:27,235 - Object - INFO - Get object by ea_guid
+2019-08-22 15:33:27,237 - Object - INFO - [(190, 'example', 'example', 1, '1', datetime.datetime(2019, 8, 22, 15, 33, 27), datetime.datetime(2019, 8, 22, 15, 33, 27))]
+2019-08-22 15:33:27,239 - Object - INFO - Done!
+2019-08-22 15:33:27,244 - Object - INFO - Program started
+2019-08-22 15:33:27,244 - Object - INFO - Delete object by ea_guid
+2019-08-22 15:33:27,244 - Object - INFO - Get object by ea_guid
+2019-08-22 15:33:27,246 - Object - INFO - []
+2019-08-22 15:33:27,254 - Object - INFO - Program started
+2019-08-22 15:33:27,254 - Object - INFO - Update object...
+2019-08-22 15:33:27,256 - Object - INFO - Get object by id
+2019-08-22 15:33:27,257 - Object - INFO - [(3, 'executable', 'second', None)]
+2019-08-22 15:33:27,258 - Object - INFO - Done!
+2019-08-22 15:34:04,144 - Package - INFO - Program started
+2019-08-22 15:34:04,144 - Package - INFO - Delete package by ea_guid
+2019-08-22 15:34:04,145 - Package - INFO - Get package by ea_guid
+2019-08-22 15:34:04,146 - Package - INFO - [(18, 'Package6', 'something11', None, None)]
+2019-08-22 15:34:04,147 - Package - INFO - Done!
+2019-08-22 15:34:04,150 - Package - INFO - Program started
+2019-08-22 15:34:04,150 - Package - INFO - Insert package...
+2019-08-22 15:34:04,152 - Package - INFO - Get package by ea_guid
+2019-08-22 15:34:04,154 - Package - INFO - [(144, 'Test', None, datetime.datetime(2019, 8, 22, 15, 34, 4), datetime.datetime(2019, 8, 22, 15, 34, 4))]
+2019-08-22 15:34:04,155 - Object - INFO - Insert Object...
+2019-08-22 15:34:04,159 - Object - INFO - Get object by ea_guid
+2019-08-22 15:34:04,269 - Object - INFO - []
+2019-08-22 15:34:04,271 - Package - INFO - [(144, 'Test', None, datetime.datetime(2019, 8, 22, 15, 34, 4), datetime.datetime(2019, 8, 22, 15, 34, 4))]
+2019-08-22 15:34:04,272 - Object - INFO - Get object by ea_guid
+2019-08-22 15:34:04,278 - Object - INFO - [(191, 'Test', None, 1, '144', datetime.datetime(2019, 8, 22, 15, 34, 4), datetime.datetime(2019, 8, 22, 15, 34, 4))]
+2019-08-22 15:34:04,278 - Package - INFO - Done!
+2019-08-22 15:34:04,283 - Package - INFO - Program started
+2019-08-22 15:34:04,283 - Package - INFO - Update package...
+2019-08-22 15:34:04,285 - Object - INFO - Update object...
+2019-08-22 15:34:04,289 - Object - INFO - Get object by id
+2019-08-22 15:34:04,292 - Object - INFO - [(1, 'executable', 'NewPackage', '2')]
+2019-08-22 15:34:04,294 - Package - INFO - Done!
+2019-08-22 15:35:52,530 - Package - INFO - Program started
+2019-08-22 15:35:52,530 - Package - INFO - Delete package by ea_guid
+2019-08-22 15:35:52,531 - Package - INFO - Get package by ea_guid
+2019-08-22 15:35:52,533 - Package - INFO - [(15, 'Package5', 'something10', None, None)]
+2019-08-22 15:35:52,536 - Object - INFO - Delete object by ea_guid
+2019-08-22 15:35:52,536 - Object - INFO - Get object by ea_guid
+2019-08-22 15:35:52,537 - Object - INFO - [(15, 'Package5', 'stereotype11', 15, None, None, None)]
+2019-08-22 15:35:52,539 - Package - INFO - Done!
+2019-08-22 15:35:52,542 - Package - INFO - Program started
+2019-08-22 15:35:52,543 - Package - INFO - Insert package...
+2019-08-22 15:35:52,546 - Package - INFO - Get package by ea_guid
+2019-08-22 15:35:52,555 - Package - INFO - [(145, 'Test', None, datetime.datetime(2019, 8, 22, 15, 35, 53), datetime.datetime(2019, 8, 22, 15, 35, 53))]
+2019-08-22 15:35:52,557 - Object - INFO - Insert Object...
+2019-08-22 15:35:52,560 - Object - INFO - Get object by ea_guid
+2019-08-22 15:35:52,562 - Object - INFO - []
+2019-08-22 15:35:52,564 - Package - INFO - [(145, 'Test', None, datetime.datetime(2019, 8, 22, 15, 35, 53), datetime.datetime(2019, 8, 22, 15, 35, 53))]
+2019-08-22 15:35:52,564 - Object - INFO - Get object by ea_guid
+2019-08-22 15:35:52,566 - Object - INFO - [(192, 'Test', None, 1, '145', datetime.datetime(2019, 8, 22, 15, 35, 53), datetime.datetime(2019, 8, 22, 15, 35, 53))]
+2019-08-22 15:35:52,566 - Package - INFO - Done!
+2019-08-22 15:35:52,568 - Package - INFO - Program started
+2019-08-22 15:35:52,569 - Package - INFO - Update package...
+2019-08-22 15:35:52,569 - Object - INFO - Update object...
+2019-08-22 15:35:52,572 - Object - INFO - Get object by id
+2019-08-22 15:35:52,575 - Object - INFO - [(1, 'executable', 'NewPackage', '2')]
+2019-08-22 15:35:52,577 - Package - INFO - Done!
+2019-08-22 15:38:53,501 - Package - INFO - Program started
+2019-08-22 15:38:53,501 - Package - INFO - Delete package by ea_guid
+2019-08-22 15:38:53,501 - Package - INFO - Get package by ea_guid
+2019-08-22 15:38:53,502 - Package - INFO - [(11, 'Package4', 'something9', None, None)]
+2019-08-22 15:38:53,507 - Object - INFO - Delete object by ea_guid
+2019-08-22 15:38:53,507 - Object - INFO - Get object by ea_guid
+2019-08-22 15:38:53,508 - Object - INFO - [(14, 'Package4', 'stereotype10', 11, None, None, None)]
+2019-08-22 15:38:53,510 - Package - INFO - Done!
+2019-08-22 15:38:53,513 - Package - INFO - Program started
+2019-08-22 15:38:53,513 - Package - INFO - Insert package...
+2019-08-22 15:38:53,516 - Package - INFO - Get package by ea_guid
+2019-08-22 15:38:53,519 - Package - INFO - [(146, 'Test', None, datetime.datetime(2019, 8, 22, 15, 38, 54), datetime.datetime(2019, 8, 22, 15, 38, 54))]
+2019-08-22 15:38:53,520 - Object - INFO - Insert Object...
+2019-08-22 15:38:53,524 - Object - INFO - Get object by ea_guid
+2019-08-22 15:38:53,527 - Object - INFO - []
+2019-08-22 15:38:53,529 - Package - INFO - [(146, 'Test', None, datetime.datetime(2019, 8, 22, 15, 38, 54), datetime.datetime(2019, 8, 22, 15, 38, 54))]
+2019-08-22 15:38:53,529 - Object - INFO - Get object by ea_guid
+2019-08-22 15:38:53,532 - Object - INFO - [(193, 'Test', None, 1, '146', datetime.datetime(2019, 8, 22, 15, 38, 54), datetime.datetime(2019, 8, 22, 15, 38, 54))]
+2019-08-22 15:38:53,533 - Package - INFO - Done!
+2019-08-22 15:38:53,536 - Package - INFO - Program started
+2019-08-22 15:38:53,536 - Package - INFO - Update package...
+2019-08-22 15:38:53,537 - Object - INFO - Update object...
+2019-08-22 15:38:53,540 - Object - INFO - Get object by id
+2019-08-22 15:38:53,544 - Object - INFO - [(1, 'executable', 'NewPackage', '2')]
+2019-08-22 15:38:53,550 - Package - INFO - Done!

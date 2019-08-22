@@ -13,7 +13,7 @@ def add_package(name, notes, stereotype, object_type, parent_id):
     :param parent_id: id родителя пакета
     :return: экземпляр на основе полученных данных
     """
-    logger = logging.getLogger("AddPackage")
+    logger = logging.getLogger("Package")
     with connection.cursor() as cursor:
         ea_quid = '{' + str(uuid.uuid4()) + '}' #генерация уникального ключа
         created_date = str(datetime.datetime.today())
@@ -28,7 +28,6 @@ def add_package(name, notes, stereotype, object_type, parent_id):
     object.add_object(name, stereotype, object_type, package_id, parent_id, ea_quid)
     logger.info(result)
     result = object.get_by_ea_guid(ea_quid)
-    logger.info(result)
     return result
 
 def get_by_ea_guid(ea_guid):
@@ -37,9 +36,12 @@ def get_by_ea_guid(ea_guid):
     :param ea_guid: уникальный ключ
     :return: экземпляра
     """
+    logger = logging.getLogger("Package")
+    logger.info("Get package by ea_guid")
     with connection.cursor() as cursor:
         sql = "SELECT `Package_ID`, `Name`, `Notes`, `CreatedDate`, `ModifiedDate`  FROM `t_package` WHERE `ea_guid`=?" #поиск добавленого пакета по ключу
         result = cursor.execute(sql, ea_guid).fetchall()
+    logger.info(result)
     return result
 
 def get_by_id(package_id):
@@ -48,9 +50,12 @@ def get_by_id(package_id):
     :param package_id: id
     :return: экземпляра
     """
+    logger = logging.getLogger("Package")
+    logger.info("Get package by id")
     with connection.cursor() as cursor:
         sql = "SELECT `Package_ID`, `Name`, `Notes` FROM `t_package` WHERE `Package_ID`=?"
         result = cursor.execute(sql, (package_id)).fetchall()  # проверка что данные объекта изменились
+    logger.info(result)
     return result
 def update_package(name, notes, stereotype, package_id):
     """
@@ -61,18 +66,17 @@ def update_package(name, notes, stereotype, package_id):
     :param package_id: id пакета
     :return: экземпляр пакета на основе изменненых данных
     """
-    logger = logging.getLogger("UpdatePackage")
+    logger = logging.getLogger("Package")
     with connection.cursor() as cursor:
         modified_data = str(datetime.datetime.today())
         logger.info("Update package...")
         sql = "UPDATE `t_package` SET `Name`=?, `Notes`=? WHERE `Package_ID`=?"
         cursor.execute(sql, (package_id, name, notes))
-        sql = "SELECT `Object_ID` FROM `t_object` WHERE `PDATA1`=?"
-        result = cursor.execute(sql, (package_id)).fetchall()
-        object_id = result[0][0]
-        object.update_object(name, stereotype, object_id)
-    print(result)
-    logger.info(result)
+    connection.commit()
+    sql = "SELECT `Object_ID` FROM `t_object` WHERE `PDATA1`=?"
+    result = cursor.execute(sql, (package_id)).fetchall()
+    object_id = result[0][0]
+    object.update_object(name, stereotype, object_id)
     return result
 
 def delete_by_ea_guid(ea_guid):
@@ -81,9 +85,12 @@ def delete_by_ea_guid(ea_guid):
     :param ea_guid: ключ
     :return: возращение удаленного объекта
     """
+    logger = logging.getLogger("Package")
+    logger.info("Delete package by ea_guid")
     with connection.cursor() as cursor:
         sql = "DELETE FROM `t_package` WHERE `ea_guid`=?"
         result = get_by_ea_guid(ea_guid)# поиск по уникальному ключу добавленного элемента
         cursor.execute(sql, (ea_guid))
     connection.commit()
+    object.delete_by_ea_guid(ea_guid)
     return result
