@@ -3,6 +3,7 @@ import logging
 import logging.config
 from models import connector
 
+
 class TestAddConnector(unittest.TestCase):
   def test_upper(self):
       logging.config.fileConfig('config/logging.conf')
@@ -16,7 +17,8 @@ class TestUpdateConnector(unittest.TestCase):
         logging.config.fileConfig('config/logging.conf')
         logger = logging.getLogger("Connector")
         logger.info("Program started")
-        self.assertTrue(connector.update_by_ea_guid("{5f68b72c-d02f-4ef0-8040-89ea827f0e20}", "second", "app", "13", "14"))
+        self.assertTrue(
+            connector.update_by_ea_guid("{5f68b72c-d02f-4ef0-8040-89ea827f0e20}", "second", "app", "13", "14"))
         logger.info("Done!")
 
 class TestDeleteConnector(unittest.TestCase):

@@ -1,38 +1,31 @@
 import unittest
+
+from app.models import object
 import logging
 import logging.config
-from models import attribute
-
-
-class TestAddAttribute(unittest.TestCase):
+class TestAddObject(unittest.TestCase):
     def test_upper(self):
         logging.config.fileConfig('config/logging.conf')
-        logger = logging.getLogger("Attribute")
+        logger = logging.getLogger("Object")
         logger.info("Program started")
-        self.assertTrue(attribute.add_attribute("first_attibute", "1"))
+        self.assertTrue(object.add_object("example", "example", "example", "1", "1"))
         logger.info("Done!")
 
-
-class TestUpdateAttribute(unittest.TestCase):
+class TestUpdateObject(unittest.TestCase):
     def test_upper(self):
         logging.config.fileConfig('config/logging.conf')
-        logger = logging.getLogger("Attribute")
+        logger = logging.getLogger("Object")
         logger.info("Program started")
-        self.assertTrue(attribute.update_attribute("second", 1))
+        self.assertTrue(object.update_object("second", "executable", "3"))
         logger.info("Done!")
 
-
-
-
-class TestDeleteAttribute(unittest.TestCase):
+class TestDeleteObject(unittest.TestCase):
     def test_upper(self):
         logging.config.fileConfig('config/logging.conf')
-        logger = logging.getLogger("Attribute")
+        logger = logging.getLogger("Object")
         logger.info("Program started")
-        attribute.delete_by_ea_guid("22422")
+        self.assertTrue(object.delete_by_ea_guid("126"))
         logger.info("Done!")
-
 
 if __name__ == '__main__':
     unittest.main()
-

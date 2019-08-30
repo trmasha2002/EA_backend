@@ -1,6 +1,6 @@
 import uuid
 import logging
-from connection import connection
+from app.connection import connection
 def add_attribute(name, object_id):
     """
     Cоздание аттрибута на основе полученых данных

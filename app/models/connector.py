@@ -1,6 +1,6 @@
 import uuid
 import logging
-from connection import connection
+from app.connection import connection
 def add_connector(name, connector_type, start_objectid, end_objectid):
     """
     Создание конектора на основе полученных данных

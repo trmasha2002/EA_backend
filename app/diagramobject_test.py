@@ -3,6 +3,7 @@ import logging
 import logging.config
 from models import diagramobjects
 
+
 class TestAddDiagramsObject(unittest.TestCase):
     def test_upper(self):
         logging.config.fileConfig('config/logging.conf')

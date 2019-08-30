@@ -1,6 +1,6 @@
 import datetime
 import uuid
-from connection import connection
+from app.connection import connection
 import logging
 def add_diagram(name, package_id, stereotype, diagram_type):
     """

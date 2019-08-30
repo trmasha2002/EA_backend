@@ -1,8 +1,8 @@
 import datetime
 import logging
 import uuid
-from models import object
-from connection import connection
+from app.connection import connection
+from app.models import object
 def add_package(name, notes, stereotype, object_type, parent_id):
     """
     Создание пакета
@@ -71,7 +71,7 @@ def update_package(name, notes, stereotype, package_id):
         modified_data = str(datetime.datetime.today())
         logger.info("Update package...")
         sql = "UPDATE `t_package` SET `Name`=?, `Notes`=? WHERE `Package_ID`=?"
-        cursor.execute(sql, (package_id, name, notes))
+        cursor.execute(sql, (name, notes, package_id))
     connection.commit()
     sql = "SELECT `Object_ID` FROM `t_object` WHERE `PDATA1`=?"
     result = cursor.execute(sql, (package_id)).fetchall()

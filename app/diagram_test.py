@@ -3,6 +3,7 @@ import logging
 import logging.config
 from models import diagram
 
+
 class TestAddDiagram(unittest.TestCase):
   def test_upper(self):
       logging.config.fileConfig('config/logging.conf')
@@ -16,7 +17,8 @@ class TestUpdateDiagram(unittest.TestCase):
         logging.config.fileConfig('config/logging.conf')
         logger = logging.getLogger("Diagram")
         logger.info("Program started")
-        self.assertTrue(diagram.update_by_ea_guid("name", "stereotype", "app-link", "{10774b8a-2e77-431f-9deb-c2ad65e24d5c}"))
+        self.assertTrue(
+            diagram.update_by_ea_guid("name", "stereotype", "app-link", "{10774b8a-2e77-431f-9deb-c2ad65e24d5c}"))
         logger.info("Done!")
 
 

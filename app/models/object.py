@@ -1,7 +1,8 @@
 import uuid
 import datetime
 import logging
-from connection import connection
+from app.connection import connection
+from app import ma
 def add_object(name, stereotype, object_type, package_id, parent_id, ea_quid=""):
     """
     Создание объекта на основе полученных данных
@@ -71,8 +72,8 @@ def update_object(name, stereotype, object_id):
         logger.info("Update object...")
         sql = "UPDATE `t_object` SET `Name`=?, `Stereotype`=?, `ModifiedDate`=? WHERE `Object_ID`=?" #поиск объекта по id и обновление нужных полей
         result = cursor.execute(sql, (name, stereotype, modified_date, object_id))
+        result = get_by_id(object_id)
     connection.commit()
-    result = get_by_id(object_id)
     return result
 
 def delete_by_ea_guid(ea_guid):
@@ -90,3 +91,4 @@ def delete_by_ea_guid(ea_guid):
         # поиск по уникальному ключу добавленного элемента
     connection.commit()
     return result
+
